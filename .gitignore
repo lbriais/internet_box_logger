@@ -1,0 +1,29 @@
+.bundle/
+log/*.log
+pkg/
+spec/dummy/db/*.sqlite3
+spec/dummy/db/*.sqlite3-journal
+spec/dummy/log/*.log
+spec/dummy/tmp/
+spec/dummy/.sass-cache
+
+# Standard Rails project
+/tmp/
+/log/
+/db/*.sqlite3
+/db/ProdDump-*.sql
+# SASS CSS generation
+/public/stylesheets/.sass-cache/
+/.sass-cache/
+# Netbeans
+/nbproject/
+# Rubymine
+/.idea
+# Sublime Text 2 project
+*.sublime-project
+*.sublime-workspace
+*(copie)*
+# RVM
+.rvmrc
+# production assets
+/public/assets/
