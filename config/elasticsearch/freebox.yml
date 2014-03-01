@@ -1,0 +1,77 @@
+---
+:freebox:
+  adsl_atm_bandwidth_down:
+    type: "double"
+  adsl_atm_bandwidth_up:
+    type: "double"
+  adsl_attenuation_down:
+    type: "double"
+  adsl_attenuation_up:
+    type: "double"
+  adsl_crc_down:
+    type: "double"
+  adsl_crc_up:
+    type: "double"
+  adsl_fec_down:
+    type: "double"
+  adsl_fec_up:
+    type: "double"
+  adsl_hec_down:
+    type: "double"
+  adsl_hec_up:
+    type: "double"
+  adsl_mode:
+    type: "string"
+  adsl_noise_margin_down:
+    type: "double"
+  adsl_noise_margin_up:
+    type: "double"
+  adsl_protocol:
+    type: "string"
+  adsl_status:
+    type: "string"
+  connection_mode:
+    type: "string"
+  created_at:
+    type: "date"
+    format: "dateOptionalTime"
+  firmware_version:
+    type: "string"
+  network_answer_to_ping:
+    type: "boolean"
+  network_dhcp:
+    type: "boolean"
+  network_dhcp_range:
+    type: "string"
+  network_dmz_ipv4:
+    type: "string"
+  network_freeplayer_ipv4:
+    type: "string"
+  network_mac:
+    type: "string"
+  network_private_ipv4:
+    type: "string"
+  network_public_ipv4:
+    type: "string"
+  network_router:
+    type: "boolean"
+  network_wake_on_lan:
+    type: "boolean"
+  phone_hanged_up:
+    type: "boolean"
+  phone_ringing:
+    type: "boolean"
+  phone_status:
+    type: "boolean"
+  up_time:
+    type: "long"
+  wifi_chanel:
+    type: "long"
+  wifi_freewifi_secure_state:
+    type: "boolean"
+  wifi_freewifi_state:
+    type: "boolean"
+  wifi_network_state:
+    type: "boolean"
+  wifi_state:
+    type: "boolean"
