@@ -22,8 +22,9 @@ module Elasticsearch
     end
 
 
-    def self.create attributes
-
+    def self.create attributes=nil
+      model_instance = attributes.nil? ? etl : new(attributes)
+      model_instance.save
     end
 
     def save
@@ -34,6 +35,7 @@ module Elasticsearch
       elasticsearch_client.index index: self.class.model_name.singular,
                                                           type: :measurement,
                                                           body: attributes
+      self
     end
 
     def attributes
@@ -67,7 +69,6 @@ module Elasticsearch
       @elasticsearch_client ||= Elasticsearch::Client.new hosts: Rails.configuration.elastic_servers,
                                                           log: true,
                                                           reload_connections: true
-      @elasticsearch_client
     end
 
     def self.load_mappings
@@ -77,10 +78,6 @@ module Elasticsearch
     def self.setup
       @mappings ||= load_mappings
       setup_fields @mappings
-    end
-
-    def self.refresh_attributes_and_mappings
-
     end
 
   end
