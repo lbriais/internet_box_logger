@@ -18,7 +18,7 @@ module Elasticsearch
     extend ActiveModel::Naming
 
     def initialize attributes={}
-      self.class.setup_attributes_and_mappings
+      self.class.setup
     end
 
 
@@ -29,6 +29,9 @@ module Elasticsearch
     def save
       self.created_at = Time.now
       elasticsearch_client.indices.put_mapping index: self.class.model_name.singular,
+                                                          type: :measurement,
+                                                          body: attributes
+      elasticsearch_client.index index: self.class.model_name.singular,
                                                           type: :measurement,
                                                           body: attributes
     end
@@ -52,6 +55,7 @@ module Elasticsearch
     private
 
     def self.setup_fields mappings
+      @attributes ||= []
       mappings.keys.each do |new_attr|
         instance_variable_set("@#{new_attr}", nil)
         send(:attr_accessor, new_attr.to_sym)
@@ -60,7 +64,9 @@ module Elasticsearch
     end
 
     def self.elasticsearch_client
-      @elasticsearch_client ||= Elasticsearch::Client.new hosts: Rails.configuration.elastic_servers, log: true, reload_connections: true
+      @elasticsearch_client ||= Elasticsearch::Client.new hosts: Rails.configuration.elastic_servers,
+                                                          log: true,
+                                                          reload_connections: true
       @elasticsearch_client
     end
 
@@ -68,9 +74,13 @@ module Elasticsearch
       Rails.configuration.elastic_mappings[name.underscore.to_sym]
     end
 
-    def self.setup_attributes_and_mappings
+    def self.setup
       @mappings ||= load_mappings
       setup_fields @mappings
+    end
+
+    def self.refresh_attributes_and_mappings
+
     end
 
   end
