@@ -17,6 +17,8 @@ module ElasticRecord
 
     extend ActiveModel::Naming
 
+    attr_accessor :internal_es_representation
+
     def initialize attributes={}
       attributes.each do |k, v|
         puts k.to_sym
@@ -27,9 +29,9 @@ module ElasticRecord
 
     def save
       self.created_at = Time.now
-      elasticsearch_client.index index: self.class.model_name.singular,
-                                 type: :measurement,
-                                 body: attributes
+      @internal_es_representation =  elasticsearch_client.index index: self.class.model_name.singular,
+                                                                     type: :measurement,
+                                                                     body: attributes
       self
     end
 
@@ -56,6 +58,14 @@ module ElasticRecord
 
     def elasticsearch_client
       self.class.elasticsearch_client
+    end
+
+    def new_record?
+     not saved?
+    end
+
+    def saved?
+      @internal_es_representation.present? && @internal_es_representation['created'] && @internal_es_representation['_id'].present?
     end
 
     def inspect
