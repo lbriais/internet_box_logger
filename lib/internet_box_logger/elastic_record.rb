@@ -29,9 +29,13 @@ module ElasticRecord
 
     def save
       self.created_at = Time.now
-      @internal_es_representation =  elasticsearch_client.index index: self.class.model_name.singular,
-                                                                     type: :measurement,
-                                                                     body: attributes
+      options = {
+          index: self.class.model_name.singular,
+          type: :measurement,
+          body: attributes
+      }
+      options[:id] = self.id if saved?
+      @internal_es_representation =  elasticsearch_client.index(**options)
       self
     end
 
@@ -60,8 +64,12 @@ module ElasticRecord
       self.class.elasticsearch_client
     end
 
+    def id
+      saved? ? internal_es_representation['_id'] : nil
+    end
+
     def new_record?
-     not saved?
+      not saved?
     end
 
     def saved?
