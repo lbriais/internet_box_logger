@@ -5,9 +5,9 @@
 # http://opensource.org/licenses/MIT
 #-------------------------------------------------------------------------------
 
-module FreeboxLogger
+module InternetBoxLogger
   class Engine < ::Rails::Engine
-    isolate_namespace FreeboxLogger
+    isolate_namespace InternetBoxLogger
 
     # Defaut Elasticsearch configuration
     # Can be overriden in app's environments files.

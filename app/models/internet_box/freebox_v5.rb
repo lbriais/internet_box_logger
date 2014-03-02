@@ -5,8 +5,8 @@
 # http://opensource.org/licenses/MIT
 #-------------------------------------------------------------------------------
 
-require 'freebox_logger/parsers/freebox_v5'
-require 'freebox_logger/elastic_record'
+require 'internet_box_logger/parsers/freebox_v5'
+require 'internet_box_logger/elastic_record'
 
 module InternetBox
   class FreeboxV5 < ElasticRecord::Base

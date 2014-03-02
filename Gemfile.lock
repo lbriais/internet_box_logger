@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    freebox_logger (0.0.1)
+    internet_box_logger (0.0.1)
       elasticsearch
       rails (~> 4.0.3)
 
@@ -112,7 +112,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  freebox_logger!
+  internet_box_logger!
   pry
   rspec
   sqlite3

@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :freebox_logger do
+# task :internet_box_logger do
 #   # Task goes here
 # end

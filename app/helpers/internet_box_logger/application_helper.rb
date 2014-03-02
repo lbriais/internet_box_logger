@@ -1,4 +1,4 @@
-module FreeboxLogger
+module InternetBoxLogger
   module ApplicationHelper
   end
 end

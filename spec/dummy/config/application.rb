@@ -8,7 +8,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
-require "freebox_logger"
+require "internet_box_logger"
 
 module Dummy
   class Application < Rails::Application

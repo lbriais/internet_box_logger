@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount FreeboxLogger::Engine => "/freebox_logger"
+  mount InternetBoxLogger::Engine => "/internet_box_logger"
 end

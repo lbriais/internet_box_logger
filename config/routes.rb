@@ -1,2 +1,2 @@
-FreeboxLogger::Engine.routes.draw do
+InternetBoxLogger::Engine.routes.draw do
 end
