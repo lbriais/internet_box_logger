@@ -7,7 +7,7 @@
 
 require 'elasticsearch'
 
-module Elasticsearch
+module ElasticRecord
 
   class Base
 
@@ -18,23 +18,18 @@ module Elasticsearch
     extend ActiveModel::Naming
 
     def initialize attributes={}
-      self.class.setup
+      attributes.each do |k, v|
+        puts k.to_sym
+        self.attributes[k.to_sym] = v if self.class.attributes.include? k.to_sym
+      end
     end
 
-
-    def self.create attributes=nil
-      model_instance = attributes.nil? ? etl : new(attributes)
-      model_instance.save
-    end
 
     def save
       self.created_at = Time.now
-      elasticsearch_client.indices.put_mapping index: self.class.model_name.singular,
-                                                          type: :measurement,
-                                                          body: attributes
       elasticsearch_client.index index: self.class.model_name.singular,
-                                                          type: :measurement,
-                                                          body: attributes
+                                 type: :measurement,
+                                 body: attributes
       self
     end
 
@@ -43,27 +38,51 @@ module Elasticsearch
       self.class.attributes.each do |attr|
         attrs[attr] = send attr
       end
-      attrs
-    end
 
-    def self.attributes
-      @attributes
+      class << attrs
+        def target=(t)
+          @target = t
+        end
+
+        def []=(key,value)
+          return unless @target.attributes.include? key.to_sym
+          @target.send "#{key}=", value
+        end
+      end
+      attrs.target = self
+
+      attrs
     end
 
     def elasticsearch_client
       self.class.elasticsearch_client
     end
 
-    private
+    def inspect
+      "<#{self.class.name}:#{self.object_id}: #{self.attributes.inspect}>"
+    end
 
-    def self.setup_fields mappings
+    def self.attributes
+      @attributes
+    end
+
+    def self.create attributes=nil
+      model_instance = attributes.nil? ? etl : new(attributes)
+      model_instance.save
+    end
+
+    protected
+
+    def self.es_attributes *attrs
       @attributes ||= []
-      mappings.keys.each do |new_attr|
+      attrs.each do |new_attr|
         instance_variable_set("@#{new_attr}", nil)
         send(:attr_accessor, new_attr.to_sym)
         @attributes << new_attr.to_sym
       end
     end
+
+    private
 
     def self.elasticsearch_client
       @elasticsearch_client ||= Elasticsearch::Client.new hosts: Rails.configuration.elastic_servers,
@@ -71,14 +90,6 @@ module Elasticsearch
                                                           reload_connections: true
     end
 
-    def self.load_mappings
-      Rails.configuration.elastic_mappings[name.underscore.to_sym]
-    end
-
-    def self.setup
-      @mappings ||= load_mappings
-      setup_fields @mappings
-    end
 
   end
 end
