@@ -33,4 +33,9 @@ Dummy::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  # Here you can override the config regarding elasticserch servers
+  # It targets localhost by default, port is elasticsearch default port.
+  # config.elastic_servers = ['127.0.0.1:9200']
+
 end

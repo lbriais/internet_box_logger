@@ -26,4 +26,9 @@ Dummy::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Here you can override the config regarding elasticserch servers
+  # It targets localhost by default, port is elasticsearch default port.
+  # config.elastic_servers = ['127.0.0.1:9200']
+
 end

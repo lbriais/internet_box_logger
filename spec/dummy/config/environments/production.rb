@@ -77,4 +77,9 @@ Dummy::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Here you can override the config regarding elasticserch servers
+  # It targets localhost by default, port is elasticsearch default port.
+  # config.elastic_servers = ['127.0.0.1:9200']
+
 end
