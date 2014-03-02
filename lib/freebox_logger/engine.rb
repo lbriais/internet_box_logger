@@ -26,12 +26,6 @@ module FreeboxLogger
     end
 
     config.after_initialize  do
-      mappings = {}
-      Dir.glob (File.join self.root,'/config/elasticsearch/*.yml') do |mapping_file|
-         mappings = merge_config_file mapping_file, mappings
-      end
-      config.elastic_mappings = mappings
-
       app_file = File.join Rails.root,'/config/environments/', Rails.env, '/elasticsearch.yml'
       file = File.exist?(app_file) ? app_file : File.join(self.root,'/config/environments/', Rails.env, '/elasticsearch.yml')
       config.elastic_servers = YAML.load_file(file)
