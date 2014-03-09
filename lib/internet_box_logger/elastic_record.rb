@@ -6,6 +6,7 @@
 #-------------------------------------------------------------------------------
 
 require 'elasticsearch'
+require 'active_model'
 
 module ElasticRecord
 
@@ -77,7 +78,7 @@ module ElasticRecord
     end
 
     def inspect
-      "<#{self.class.name}:#{self.object_id}: #{self.attributes.inspect}>"
+      "<#{self.class.name}:#{self.object_id}:#{" ID: #{self.id}" if saved?} #{self.attributes.inspect}>"
     end
 
     def self.attributes
@@ -87,6 +88,10 @@ module ElasticRecord
     def self.create attributes=nil
       model_instance = attributes.nil? ? etl : new(attributes)
       model_instance.save
+    end
+
+    def persisted?
+      true
     end
 
     protected

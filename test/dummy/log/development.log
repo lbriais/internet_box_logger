@@ -1,0 +1,3461 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-27 11:08:32 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/internet_box_logger" for 127.0.0.1 at 2014-02-27 11:08:40 +0100
+
+ActionController::RoutingError (No route matches [GEinternet_box_loggerogger"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /opt/rbenv/versions/2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /opt/rbenv/versions/2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /opt/rbenv/versions/2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.0ms)
+  Rendered /opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered /opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.1ms)
+Loading /home/laurent/devel/ruby/railinternet_box_loggerbox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/rubyinternet_box_logger/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/develinternet_box_loggergines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/internet_box_loggerls/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/lauinternet_box_loggery/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /hominternet_box_loggerl/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loadinginternet_box_logger/devel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Lointernet_box_loggerurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/internet_box_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/enginternet_box_loggerogger/config/freebox.yml
+Loading /home/laurent/devel/ruby/railinternet_box_loggerbox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/rubyinternet_box_logger/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+Loading /home/laurent/develinternet_box_loggergines/freebox_logger/config/freebox.yml
+Loading /home/laurent/internet_box_loggerls/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/lauinternet_box_loggery/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+Loading /hominternet_box_loggerl/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loadinginternet_box_logger/devel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Lointernet_box_loggerurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yinternet_box_loggerme/laurent/devel/ruby/rails/engines/freebox_logger/config/freeinternet_box_loggerg /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/development/elastinternet_box_loggeroading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/development/internet_box_loggeryml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_loginternet_box_loggerebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/deinternet_box_loggerticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environmeninternet_box_logger/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engiinternet_box_loggergger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/internet_box_loggerevelopment/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/cointernet_box_loggernts/development/elasticsearch.yml
+Loading /home/laurent/devel/internet_box_loggerines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freeboxinternet_box_logger/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_loggeinternet_box_loggeronfig/environments/development/elasticsearch.yml
+Loading /homeinternet_box_logger/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/internet_box_loggerx_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engineinternet_box_loggerer/spec/dummy/config/environments/development/elasticsearch.yminternet_box_loggere/laurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/deinternet_box_logger/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruinternet_box_loggeres/freebox_logger/spec/dummy/config/environments/development/einternet_box_loggerml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /internet_box_loggerevel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/linternet_box_loggeruby/rails/engines/freebox_logger/spec/dummy/config/environmentinternet_box_loggerelasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freebointernet_box_logger/home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+internet_box_loggerlaurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/coninternet_box_loggerts/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_loggeinternet_box_loggerox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/development/elainternet_box_logger
+Loading /home/laurent/devel/ruby/rails/engines/freebox_loggerinternet_box_loggernfig/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engineinternet_box_loggerer/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/internet_box_loggerasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/enginesinternet_box_loggerr/spec/dummy/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruinternet_box_loggeres/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 21 jours, 20 heures, 50 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9261 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.30 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 73022
+adsl_fec_up => 11385
+adsl_crc_down => 26125
+adsl_crc_up => 0
+adsl_hec_down => 480
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 21 jours, 20 heures, 51 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9261 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.20 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 73023
+adsl_fec_up => 11385
+adsl_crc_down => 26125
+adsl_crc_up => 0
+adsl_hec_down => 480
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayinternet_box_logger.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lainternet_box_logger
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/linternet_box_loggeruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebinternet_box_loggerig/environments/development/elasticsearch.yml
+Loading /home/lainternet_box_loggerby/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+internet_box_loggerlaurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/railinternet_box_loggerbox_logger/config/environments/development/elasticsearch.yml
+Linternet_box_loggeraurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/development/elainternet_box_logger
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/internet_box_loggerls/engines/freebox_logger/config/environments/development/elasinternet_box_loggerLoading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/internet_box_loggerasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loadinginternet_box_logger/devel/ruby/rails/engines/freebox_logger/config/environments/dinternet_box_loggersticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/confiinternet_box_logger/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freeinternet_box_loggerg /home/laurent/devel/ruby/rails/engines/freebox_logger/configinternet_box_loggerdevelopment/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/sinternet_box_loggerig/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_loginternet_box_loggerebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebointernet_box_loggerg/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/finternet_box_loggerspec/dummy/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engiinternet_box_loggergger/config/freebox.yml
+Loading /home/laurent/devel/ruby/railsinternet_box_loggerox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/internet_box_loggerfreebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/internet_box_loggerines/freebox_logger/config/freebox.yml
+Loading /home/laurent/dinternet_box_loggers/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurinternet_box_logger/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+Loading /homeinternet_box_logger/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading internet_box_loggerdevel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loainternet_box_loggerrent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yminternet_box_loggere/laurent/devel/ruby/rails/engines/freebox_logger/config/freebinternet_box_logger /home/laurent/devel/ruby/rails/engines/freebox_logger/config/internet_box_loggerevelopment/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spinternet_box_loggerg/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logginternet_box_loggerbox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freeboxinternet_box_logger/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environmentinternet_box_loggerelasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/envirointernet_box_loggerment/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/internet_box_loggerx_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rinternet_box_loggerreebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/rinternet_box_loggernes/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+Loading /home/laurent/deinternet_box_logger/engines/freebox_logger/config/freebox.yml
+Loading /home/laureinternet_box_loggerrails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engineinternet_box_loggerer/config/environments/development/elasticsearch.yml
+Loading /internet_box_loggerevel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearinternet_box_logger /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 21 jours, 23 heures, 21 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9261 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.10 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 75873
+adsl_fec_up => 11393
+adsl_crc_down => 26125
+adsl_crc_up => 0
+adsl_hec_down => 480
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désacinternet_box_loggerwifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:Ainternet_box_loggeric_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+netinternet_box_logger=> 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 22 jours, 12 heures, 49 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9261 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 236896
+adsl_fec_up => 11464
+adsl_crc_down => 28872
+adsl_crc_up => 0
+adsl_hec_down => 592
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 13 heures, 15 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.20 dB
+adsl_noise_margin_up => 8.20 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 373328
+adsl_fec_up => 11647
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifiinternet_box_loggerctivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 0internet_box_loggerA8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.internet_box_loggertwork_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 15 heures, 8 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.80 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 373683
+adsl_fec_up => 11655
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivinternet_box_loggeri_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+ninternet_box_logger00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_privainternet_box_logger.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 15 heures, 12 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.80 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 373698
+adsl_fec_up => 11658
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_stinternet_box_loggervé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_stateinternet_box_loggernetwork_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activinternet_box_loggerate_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+ninternet_box_loggerto_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcinternet_box_loggertwork_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/eninternet_box_loggerlogger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/environmeinternet_box_loggert/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/enginternet_box_loggerogger/spec/dummy/config/environments/development/elasticsearch.yml
+Loading /home/laurent/deveinternet_box_loggerngines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/cinternet_box_loggerents/development/elasticsearch.yml
+Loading /home/laurent/develinternet_box_loggergines/freebox_logger/spec/dummy/config/environments/development/elasticsearch.yml
+Loading /hointernet_box_loggerel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/finternet_box_loggerconfig/environments/development/elasticsearch.yml
+Loading /home/laurent/deveinternet_box_loggerngines/freebox_logger/spec/dummy/config/environments/development/elasticsearinternet_box_logger /home/laurent/devel/ruby/rails/engines/freebox_logger/config/freebox.yml
+Lointernet_box_loggerurent/devel/ruby/rails/engines/freebox_logger/config/environments/developmeninternet_box_loggerh.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/spec/duminternet_box_loggerronments/development/elasticsearch.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/cointernet_box_loggerarch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 15 heures, 56 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.70 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 373865
+adsl_fec_up => 11666
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsinternet_box_logger2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_netwointernet_box_loggersactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désacinternet_box_loggerac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router internet_box_loggerork_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+networinternet_box_loggerpv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan =>internet_box_loggerwork_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Lointernet_box_loggerurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yinternet_box_loggerme/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 16 heures, 32 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.70 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 374655
+adsl_fec_up => 11674
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 16 heures, 33 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.70 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 374664
+adsl_fec_up => 11674
+adslinternet_box_logger23853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => internet_box_loggerk_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 16 heures, 40 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 374765
+adsl_fec_up => internet_box_logger_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 16 heures, 54 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 374834
+adsl_fec_uinternet_box_loggerl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 3internet_box_logger=> désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 18 heures, 39 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.70 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 375625
+internet_box_logger 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hinternet_box_loggerifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifinternet_box_loggerte => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 18 heures, 53 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.80 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_internet_box_logger
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 1internet_box_loggerinutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.80 dB
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 0 minute
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.80 dB
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 1 minute
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.80 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dBinternet_box_logger => 375685
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 3 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.80 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.internet_box_logger_down => 375687
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 7 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.80 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up =internet_box_loggerl_fec_down => 375698
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 12 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.70 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuationinternet_box_loggerB
+adsl_fec_down => 375707
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_internet_box_loggersl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_stainternet_box_loggeré
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+firmware_version => 1.5.20
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 40 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+ainternet_box_loggern_up => 14.80 dB
+adsl_fec_down => 375788
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 41 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.70 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00internet_box_loggeruation_up => 14.80 dB
+adsl_fec_down => 375792
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 41 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => internet_box_loggerattenuation_up => 14.80 dB
+adsl_fec_down => 375794
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 43 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.90 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 375802
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 43 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_dowinternet_box_loggeradsl_attenuation_up => 14.80 dB
+adsl_fec_down => 375802
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 46 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuatiointernet_box_logger0 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 375809
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 19 heures, 47 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_atteninternet_box_logger 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 375811
+adsl_fec_uinternet_box_loggerl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 3internet_box_logger=> désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifiinternet_box_loggerctivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 20 heures, 17 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.90 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 375887
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 20 heures, 18 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margin_up =internet_box_logger_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 375889
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 20 heures, 18 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margininternet_box_logger
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 375889
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 20 heures, 19 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_minternet_box_logger90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adslinternet_box_logger75891
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hecinternet_box_loggeradsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 20 heures, 21 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 internet_box_loggermargin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 375893
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 20 heures, 28 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => internet_box_loggeroise_margin_up => 7.80 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 375910
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 23 jours, 20 heures, 29 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 9043 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_dowinternet_box_loggerdsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuinternet_box_logger.80 dB
+adsl_fec_down => 375912
+adsl_fec_up => 11707
+adsl_crc_down => 123853
+adsl_crc_up => 0
+adsl_hec_down => 2161
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 2 heures, 39 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_internet_box_logger 6.10 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 483384
+adsl_fec_up => 11755
+adsl_crc_down => 123864
+adsl_crc_up => 0
+adsl_hec_down => 2162
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 3 heures, 18 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_ninternet_box_loggerwn => 6.30 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00internet_box_loggeruation_up => 14.80 dB
+adsl_fec_down => 483882
+adsl_fec_up => 11755
+adsl_crc_down => 123864
+adsl_crc_up => 0
+adsl_hec_down => 2162
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 3 heures, 36 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.30 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 484195
+adsl_fec_up => 11755
+adsl_crc_down => 123887
+adsl_crc_up => 0
+adsl_hec_down => 2163
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 3 heures, 38 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 484247
+adsl_fec_up => 11755
+adsl_crc_down => 123887
+adsl_crc_up => 0
+adsl_hec_down => 2163
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 3 heures, 38 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.90 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 484249
+adsl_fec_up => 11755
+adsl_crc_down => 123887
+adsl_crc_up => 0
+adsl_hec_down => 2163
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 3 heures, 38 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.20 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 484250
+adsl_fec_up => 11755
+adsl_crc_down => 123887
+adsl_crc_up => 0
+adsl_hec_down => 2163
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 4 heures, 55 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.40 dB
+adsl_noise_margin_up => 8.30 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 485630
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 4 heures, 55 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.40 dB
+adsl_noise_margin_up => 8.30 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 485630
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 4 heures, 55 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.30 dB
+adsl_noise_margin_up => 8.20 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 485633
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 4 heures, 57 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.20 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 485673
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 5 heures, 7 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.20 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 485842
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 5 heures, 7 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.20 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 485842
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 5 heures, 14 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.20 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 485916
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 5 heures, 32 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.40 dB
+adsl_noise_margin_up => 8.20 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486055
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 5 heures, 32 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.40 dB
+adsl_noise_margin_up => 8.20 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486055
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 5 heures, 53 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486235
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 5 heures, 53 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486235
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 5 heures, 53 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486235
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 5 heures, 53 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486236
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 5 heures, 53 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486236
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 6 heures, 0 minute
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.00 dB
+adsl_noise_margin_up => 8.20 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486289
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 6 heures, 0 minute
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.00 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486289
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 6 heures, 5 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.40 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486398
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 6 heures, 5 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.40 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486398
+adsl_fec_up => 11755
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 6 heures, 50 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486708
+adsl_fec_up => 11763
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 6 heures, 50 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kinternet_box_logger_margin_down => 6.10 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 486708
+adsl_fec_up => 11763
+adsl_crc_down => 123895
+adsl_crc_up => 0
+adsl_hec_down => 2164
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 16 heures, 0 minute
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1internet_box_loggernoise_margin_down => 7.30 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 490865
+adsl_fec_up => 11795
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 16 heures, 1 minute
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_upinternet_box_loggeradsl_noise_margin_down => 7.40 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_atteninternet_box_logger 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 490869
+adsl_fec_up => 11795
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 16 heures, 29 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bainternet_box_logger1025 kb/s
+adsl_noise_margin_down => 7.40 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 490942
+adsl_fec_up => 11804
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 16 heures, 41 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_ainternet_box_loggerp => 1025 kb/s
+adsl_noise_margin_down => 7.30 dB
+adsl_noise_margin_up => 7.9internet_box_loggernuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 49internet_box_loggerup => 11804
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+ainternet_box_logger327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivinternet_box_loggeri_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => internet_box_logger:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_printernet_box_logger192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 =>internet_box_logger
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 17 heures, 16 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsinternet_box_loggerh_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_dowinternet_box_loggerdsl_noise_margin_up => 7.80 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491050
+adsl_fec_up => 11804
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 17 heures, 25 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interinternet_box_loggerm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_internet_box_logger 8.00 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491064
+adsl_fec_up => 11804
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+Loading /home/laurent/devel/ruby/rails/engines/freebox_logger/config/elasticsearch/freebox.yml
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 17 heures, 32 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 7.50 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491102
+adsl_fec_up => 11812
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 17 heures, 33 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 7.50 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491102
+adsl_fec_up => 11812
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 20 heures, 40 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 7.80 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491584
+adsl_fec_up => 11833
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 20 heures, 41 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 7.60 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491592
+adsl_fec_up => 11833
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 20 heures, 42 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 7.80 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491596
+adsl_fec_up => 11833
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 20 heures, 46 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 7.80 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491608
+adsl_fec_up => 11833
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 20 heures, 46 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 7.90 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491608
+adsl_fec_up => 11833
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 20 heures, 53 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 7927 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 8.20 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491624
+adsl_fec_up => 11842
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 21 heures, 24 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8808 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.30 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491670
+adsl_fec_up => 11842
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 21 heures, 37 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8808 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491693
+adsl_fec_up => 11850
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 21 heures, 53 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8808 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.10 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491745
+adsl_fec_up => 11850
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 22 heures, 39 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8808 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.60 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 491974
+adsl_fec_up => 11866
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 22 heures, 55 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8808 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.90 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 492061
+adsl_fec_up => 11866
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 23 heures, 6 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8808 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.00 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 492095
+adsl_fec_up => 11866
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 23 heures, 23 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8808 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.70 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 492569
+adsl_fec_up => 11875
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 23 heures, 29 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8808 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.20 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 492601
+adsl_fec_up => 11875
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 23 heures, 32 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8808 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 492611
+adsl_fec_up => 11875
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 24 jours, 23 heures, 33 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8808 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.40 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 492618
+adsl_fec_up => 11875
+adsl_crc_down => 123917
+adsl_crc_up => 0
+adsl_hec_down => 2168
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 30 jours, 19 heures, 35 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8293 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.50 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 815179
+adsl_fec_up => 12541
+adsl_crc_down => 127051
+adsl_crc_up => 0
+adsl_hec_down => 2301
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 30 jours, 20 heures, 33 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8293 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.50 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 815296
+adsl_fec_up => 12549
+adsl_crc_down => 127051
+adsl_crc_up => 0
+adsl_hec_down => 2301
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 30 jours, 20 heures, 36 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8293 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.50 dB
+adsl_noise_margin_up => 7.90 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 815299
+adsl_fec_up => 12557
+adsl_crc_down => 127051
+adsl_crc_up => 0
+adsl_hec_down => 2301
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 30 jours, 22 heures, 45 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8293 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.50 dB
+adsl_noise_margin_up => 8.10 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 815714
+adsl_fec_up => 12589
+adsl_crc_down => 127051
+adsl_crc_up => 0
+adsl_hec_down => 2301
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 30 jours, 22 heures, 47 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8293 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 6.80 dB
+adsl_noise_margin_up => 8.00 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 815719
+adsl_fec_up => 12589
+adsl_crc_down => 127051
+adsl_crc_up => 0
+adsl_hec_down => 2301
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+firmware_version => 1.5.20
+connection_mode => Dégroupé
+up_time => 31 jours, 19 heures, 57 minutes
+phone_status => Ok
+phone_hanged_up => Raccroché
+phone_ringing => Inactive
+adsl_status => Showtime
+adsl_protocol => ADSL2+
+adsl_mode => Interleaved
+adsl_atm_bandwidth_down => 8907 kb/s
+adsl_atm_bandwidth_up => 1025 kb/s
+adsl_noise_margin_down => 5.60 dB
+adsl_noise_margin_up => 7.80 dB
+adsl_attenuation_down => 30.00 dB
+adsl_attenuation_up => 14.80 dB
+adsl_fec_down => 831913
+adsl_fec_up => 12746
+adsl_crc_down => 127269
+adsl_crc_up => 0
+adsl_hec_down => 2306
+adsl_hec_up => 327
+wifi_state => désactivé
+wifi_chanel => 13
+wifi_network_state => Désactivé
+wifi_freewifi_state => Désactivé
+wifi_freewifi_secure_state => Désactivé
+network_mac => 00:07:CB:44:65:A8
+network_public_ipv4 => 88.167.183.54
+network_router => Activé
+network_private_ipv4 => 192.168.250.254
+network_dmz_ipv4 => 192.168.250.0
+network_freeplayer_ipv4 => 192.168.250.2
+network_answer_to_ping => Activé
+network_wake_on_lan => Désactivé
+network_dhcp => Activé
+network_dhcp_range => 192.168.250.10 - 192.168.250.50
+  [1m[36m (10.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (9.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (29.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (47.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (49.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (24.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (20.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (15.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (13.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (12.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (17.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (26.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (26.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (32.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (33.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (13.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (13.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (19.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (26.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (27.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (20.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (39.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (36.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (37.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (34.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (31.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (13.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (14.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (27.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (70.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (22.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (27.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (17.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (11.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (13.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (36.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (33.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (32.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (20.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (10.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (19.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (21.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (23.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (18.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (13.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (16.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (22.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (29.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (25.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (16.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (20.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (29.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (17.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (15.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (15.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (11.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (16.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (18.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (21.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (21.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (21.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
