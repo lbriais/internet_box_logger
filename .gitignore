@@ -1,29 +1,42 @@
-.bundle/
-log/*.log
-pkg/
-spec/dummy/db/*.sqlite3
-spec/dummy/db/*.sqlite3-journal
-spec/dummy/log/*.log
-spec/dummy/tmp/
-spec/dummy/.sass-cache
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# Standard
+*~
+
+# Ruby
+/.bundle/
+/.rvmrc
+/Gemfile.lock
 
 # Standard Rails project
 /tmp/
-/log/
 /db/*.sqlite3
-/db/ProdDump-*.sql
+/test/dummy/db/*.sqlite3
+/log/*.log
+
+# Rails engines
+/test/dummy/db/*.sqlite3
+/test/dummy/log/*.log
+/test/dummy/tmp/
+/test/dummy/.sass-cache
+
 # SASS CSS generation
 /public/stylesheets/.sass-cache/
-/.sass-cache/
+
 # Netbeans
 /nbproject/
-# Rubymine
-/.idea
+
 # Sublime Text 2 project
 *.sublime-project
 *.sublime-workspace
 *(copie)*
-# RVM
-.rvmrc
-# production assets
-/public/assets/
+
+# Rubymine
+/.idea/
+
+# Misc
+/projectFilesBackup/
+/pkg/

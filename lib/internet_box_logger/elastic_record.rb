@@ -6,7 +6,6 @@
 #-------------------------------------------------------------------------------
 
 require 'elasticsearch'
-require 'active_model'
 
 module ElasticRecord
 
