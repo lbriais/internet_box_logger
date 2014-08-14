@@ -36,6 +36,7 @@ module ElasticRecord
       }
       options[:id] = self.id if saved?
       @internal_es_representation =  elasticsearch_client.index(**options)
+      Rails.logger.debug 'Saving to ElasticSearch'
       self
     end
 

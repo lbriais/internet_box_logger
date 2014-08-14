@@ -8,7 +8,7 @@
 require 'internet_box_logger/parsers/freebox_v5'
 require 'internet_box_logger/elastic_record'
 
-module InternetBox
+module InternetBoxLogger
   class FreeboxV5 < ElasticRecord::Base
 
     attr_accessor :last_raw_status
