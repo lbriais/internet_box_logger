@@ -2,7 +2,7 @@
 
 require 'open-uri'
 
-module InternetBox
+module InternetBoxLogger
   module Parsers
     module FreeboxV5
 

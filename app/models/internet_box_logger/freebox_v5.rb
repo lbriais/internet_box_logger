@@ -23,7 +23,7 @@ module InternetBoxLogger
                   :wifi_network_state, :wifi_state
 
 
-    include InternetBox::Parsers::FreeboxV5
+    include InternetBoxLogger::Parsers::FreeboxV5
 
   end
 end
