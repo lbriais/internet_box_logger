@@ -30,5 +30,9 @@ Dummy::Application.configure do
   # Here you can override the config regarding elasticserch servers
   # It targets localhost by default, port is elasticsearch default port.
   # config.elastic_servers = ['127.0.0.1:9200']
+  # Used by the rake tasks to manipulate Elastic Search server
+  # config.elastic_binary = '/opt/elasticsearch/bin/elasticsearch'
+  # Interval between two poll in minutes
+  # config.cron_interval = 5
 
 end

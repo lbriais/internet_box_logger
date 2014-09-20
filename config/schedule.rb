@@ -23,6 +23,10 @@ set :output, "#{path}/log/cron.log"
 # set environment, 'development'
 # job_type :script, "'#{path}/script/:task' :output"
 
-every 1.minute do
+# Default interval
+# To actually set the default interval, use elastic_interval in your application config
+@interval ||= 1
+
+every @interval.to_i.minute do
   runner 'InternetBoxLogger::FreeboxV5.etl.save'
 end
