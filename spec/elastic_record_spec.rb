@@ -16,7 +16,7 @@ describe "When created from real measurements" do
     subject.created_at.should be_nil
   end
 
-  it "should not have be #saved?" do
+  it "should not have been #saved? automatically" do
     expect( subject.saved?).to be_false
   end
 
