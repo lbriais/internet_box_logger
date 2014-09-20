@@ -4,6 +4,7 @@
 # Copyright (c) 2014 L.Briais under MIT license
 # http://opensource.org/licenses/MIT
 #-------------------------------------------------------------------------------
+require 'elasticsearch'
 
 module InternetBoxLogger
   class Engine < ::Rails::Engine

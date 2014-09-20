@@ -5,8 +5,6 @@
 # http://opensource.org/licenses/MIT
 #-------------------------------------------------------------------------------
 
-require 'elasticsearch'
-
 module ElasticRecord
 
   class Base
@@ -38,6 +36,8 @@ module ElasticRecord
       @internal_es_representation =  elasticsearch_client.index(**options)
       Rails.logger.debug 'Saving to ElasticSearch'
       self
+    rescue
+      Rails.logger.warn 'Unable to save to ElasticSearch !!'
     end
 
     def attributes
