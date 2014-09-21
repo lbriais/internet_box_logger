@@ -19,22 +19,34 @@ namespace :internet_box_logger do
       bin
     end
 
-    desc "Starts your ElasticSearch server"
+    desc 'Starts your ElasticSearch server'
     task :start => :environment do
       puts es_binary
     end
 
-    desc "Stops your ElasticSearch server"
+    desc 'Stops your ElasticSearch server'
     task :stop => :environment do
       puts es_binary
     end
 
-    desc "Show your ElasticSearch config"
+    desc 'Show your ElasticSearch config'
     task :info => :environment do
       puts "config.elastic_servers = #{Rails.configuration.elastic_servers}"
       puts "config.elastic_binary = #{es_binary}"
     end
+  end
 
+
+  namespace :kibana do
+
+    desc 'Installs Kibana in the vendor directory'
+    task :install
+
+    desc 'Create link to the actual place you installed Kibana'
+    task :link_to
+
+    desc 'Loads default JSON reports into ElasticSearch for Kibana display'
+    task :freebox_report
 
   end
 
@@ -45,21 +57,21 @@ namespace :internet_box_logger do
       "#{ibl_gem_path}/config/schedule.rb"
     end
 
-    desc "Setup cron to gather information every x minutes (configurable)"
+    desc 'Setup cron to gather information every x minutes (configurable)'
     task :setup => :environment do
       puts "Using Whenever config file: '#{whenever_conf_file}' with interval #{Rails.configuration.cron_interval}"
       rake_system "whenever -f '#{whenever_conf_file}' -i '#{whenever_conf_file}' -s 'interval=#{Rails.configuration.cron_interval}'"
       puts 'Crontab updated'
     end
 
-    desc "Removes cron task"
+    desc 'Removes cron task'
     task :stop do
       puts "Using Whenever config file: '#{whenever_conf_file}'"
       rake_system "whenever -c '#{whenever_conf_file}'"
       puts 'Crontab updated'
     end
 
-    desc "Show your Cron config"
+    desc 'Show your Cron config'
     task :info => :environment do
       puts "Whenever config file used = #{whenever_conf_file}'"
       puts "config.cron_interval = #{Rails.configuration.cron_interval}"
