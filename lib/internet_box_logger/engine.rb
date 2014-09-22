@@ -5,6 +5,8 @@
 # http://opensource.org/licenses/MIT
 #-------------------------------------------------------------------------------
 require 'elasticsearch'
+require 'internet_box_logger/parsers/freebox_v5'
+require 'internet_box_logger/elastic_record'
 
 module InternetBoxLogger
   class Engine < ::Rails::Engine
