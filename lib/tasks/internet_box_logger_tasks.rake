@@ -50,17 +50,13 @@ namespace :internet_box_logger do
     end
 
     def already_running?
-      File.exists? ES_PID_FILE
+      `ps aux | grep 'elasticsearc[h]' | awk '{ print $2 }'` != ''
     end
 
     def es_pid
       pid = nil
       return pid unless already_running?
-      File.open(ES_PID_FILE) do |f|
-        pid = f.gets
-        puts "PID: #{pid}"
-      end
-      pid.to_i
+      `ps aux | grep 'elasticsearc[h]' | awk '{ print $2 }'`.to_i
     end
 
 
@@ -87,11 +83,8 @@ namespace :internet_box_logger do
         puts 'ElasticSearch already running... Aborting'
         next
       end
-      pid = create_pid_file do |pid_file|
-        pid_file.puts spawn("#{es_binary} -d")
-      end
-      puts "ElasticSearch started with pid: #{pid}"
-      pid
+      spawn("#{es_binary} -d")
+      puts 'ElasticSearch server started'
     end
 
     desc 'Stops your ElasticSearch server'
