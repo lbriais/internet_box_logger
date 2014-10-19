@@ -23,5 +23,42 @@ module InternetBoxLogger
 
     include InternetBoxLogger::Parsers::FreeboxV5
 
+
+    def as_elastic_measurements
+      self.created_at = Time.now
+
+    end
+
+    def get_up_down_attributes
+      res = []
+      self.class.up_down_reports.each_pair do |measurement, name|
+        %w(up down).each do |measurement_type|
+          data_name = "#{measurement}_#{measurement_type}"
+          es_object = {
+              index: self.class.model_name.singular,
+              type: data_name
+          }
+          data = {
+              created_at: self.created_at,
+              value: attributes[data_name.to_sym]
+          }
+          es_object[:body] = data
+          res << es_object
+        end
+      end
+      generic_info = {}
+      attributes.each do |attr_name, content|
+        next if attr_name.length > 3 && self.class.up_down_reports.keys.include?(attr_name[0...attr_name.length-3].to_sym)
+        generic_info[attr_name] = content
+      end
+      res << {
+              index: self.class.model_name.singular,
+              type: :generic,
+              body: generic_info
+          }
+
+      res
+    end
+
   end
 end
