@@ -24,6 +24,16 @@ module ElasticRecord
       end
     end
 
+    def save2
+      self.created_at = Time.now
+      self.as_es_documents.each do |document|
+          elasticsearch_client.index(**document)
+      end
+      Rails.logger.debug 'Saving to ElasticSearch'
+      self
+    rescue
+      Rails.logger.warn 'Unable to save to ElasticSearch !!'
+    end
 
     def save
       self.created_at = Time.now

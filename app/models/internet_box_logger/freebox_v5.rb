@@ -24,12 +24,7 @@ module InternetBoxLogger
     include InternetBoxLogger::Parsers::FreeboxV5
 
 
-    def as_elastic_measurements
-      self.created_at = Time.now
-
-    end
-
-    def get_up_down_attributes
+    def as_es_documents
       res = []
       self.class.up_down_reports.each_pair do |measurement, name|
         %w(up down).each do |measurement_type|
