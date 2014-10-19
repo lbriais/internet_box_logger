@@ -8,7 +8,6 @@
 require 'spec_helper'
 require 'internet_box_logger/freebox_v5'
 
-#describe EasyAppHelper::Core::Config do
 describe "When created from real measurements" do
   subject {InternetBoxLogger::FreeboxV5.etl}
 
