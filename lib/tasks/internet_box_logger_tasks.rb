@@ -1,3 +1,5 @@
+require 'tempfile'
+
 class File
 
   def self.is_executable?(filename)
@@ -31,6 +33,17 @@ module InternetBoxLogger
       spec = Gem::Specification.find_by_name('internet_box_logger')
       File.expand_path "../#{spec.name}", spec.spec_dir
     end
+
+    def suppress_symlink_only(path)
+      return unless File.exists? path
+      if File.symlink? path
+        File.unlink path
+        puts "Removed symlink '#{path}'"
+      else
+        raise "Oops #{path} is not a symbolic link. You may want to manage its removal/move manually. Aborting !"
+      end
+    end
+
 
     module ElasticSearch
 
@@ -82,6 +95,20 @@ module InternetBoxLogger
       end
 
     end
+
+    module Kibana
+
+
+      def kibana_symlink_path
+        "#{Rails.configuration.root}/public/kibana"
+      end
+
+
+      def valid_kibana_path? path
+        File.exists? "#{path}/index.html"
+      end
+    end
+
 
   end
 end

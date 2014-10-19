@@ -1,5 +1,6 @@
 require 'tasks/internet_box_logger_tasks'
 
+
 namespace :internet_box_logger do
 
   include InternetBoxLogger::Tasks
@@ -26,8 +27,8 @@ namespace :internet_box_logger do
         next
       end
       pid = es_pid
-      raise "Invalid operation on pid file" if pid.nil? || pid < 1
-      Process.kill("SIGTERM", pid)
+      raise 'Invalid operation on pid file' if pid.nil? || pid < 1
+      Process.kill('SIGTERM', pid)
       puts 'ElasticSearch stopped'
     end
 
@@ -45,11 +46,23 @@ namespace :internet_box_logger do
   # Kibana tasks
   namespace :kibana do
 
+    include InternetBoxLogger::Tasks::Kibana
+
     desc 'Installs Kibana in the vendor directory'
     task :install
 
     desc 'Create link to the actual place you installed Kibana'
-    task :link_to
+    task :link_to, :kibana_path do |t, args|
+      kibana_path = args.kibana_path.nil? ? ARGV.pop : args.kibana_path
+      raise 'Please provide a valid Kibana installation path' if kibana_path == t.name
+      raise "No Kibana installation found in '#{kibana_path}'" unless valid_kibana_path?(kibana_path)
+      puts "Installing Kibana from path '#{kibana_path}'"
+      suppress_symlink_only kibana_symlink_path
+      puts "Creating new link to Kibana installation '#{kibana_path}'"
+      File.symlink kibana_path, kibana_symlink_path
+      puts 'Done'
+    end
+
 
     desc 'Loads default JSON reports into ElasticSearch for Kibana display'
     task :freebox_report
