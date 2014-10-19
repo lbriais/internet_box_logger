@@ -77,12 +77,12 @@ namespace :internet_box_logger do
     desc 'Setup cron to gather information every x minutes (configurable)'
     task :setup => :environment do
       puts "Using Whenever config file: '#{whenever_conf_file}' with interval #{Rails.configuration.cron_interval}"
-      rake_system "whenever -f '#{whenever_conf_file}' -i '#{whenever_conf_file}' -s 'interval=#{Rails.configuration.cron_interval}'"
+      rake_system "whenever -f '#{whenever_conf_file}' -i '#{whenever_conf_file}' -s interval='#{Rails.configuration.cron_interval}'"
       puts 'Crontab updated'
     end
 
     desc 'Removes cron task'
-    task :stop do
+    task :remove do
       puts "Using Whenever config file: '#{whenever_conf_file}'"
       rake_system "whenever -c '#{whenever_conf_file}'"
       puts 'Crontab updated'
