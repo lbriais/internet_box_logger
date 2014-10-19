@@ -45,13 +45,13 @@ module InternetBoxLogger
       end
 
       def already_running?
-        `ps aux | grep 'elasticsearc[h]' | awk '{ print $2 }'` != ''
+        !es_pid.nil?
       end
 
       def es_pid
-        pid = nil
-        return pid unless already_running?
-        `ps aux | grep 'elasticsearc[h]' | awk '{ print $2 }'`.to_i
+        pid = `ps aux | grep 'elasticsearc[h]' | awk '{ print $2 }'`
+        return nil if pid.nil? || pid.empty?
+        pid.to_i
       end
 
 

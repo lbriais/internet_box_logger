@@ -9,7 +9,7 @@ namespace :internet_box_logger do
 
     include InternetBoxLogger::Tasks::ElasticSearch
 
-    desc 'Starts your ElasticSearch server'
+    desc 'Starts your local ElasticSearch server'
     task :start => :environment do
       if already_running?
         puts 'ElasticSearch already running... Aborting'
@@ -19,7 +19,7 @@ namespace :internet_box_logger do
       puts 'ElasticSearch server started'
     end
 
-    desc 'Stops your ElasticSearch server'
+    desc 'Stops your local ElasticSearch server'
     task :stop => :environment do
       unless already_running?
         puts 'ElasticSearch is not running... Nothing to stop'
@@ -31,11 +31,11 @@ namespace :internet_box_logger do
       puts 'ElasticSearch stopped'
     end
 
-    desc 'Show your ElasticSearch config'
+    desc 'Show your local ElasticSearch config'
     task :info => :environment do
       puts "config.elastic_servers = #{Rails.configuration.elastic_servers}"
       puts "config.elastic_binary = #{es_binary}"
-      puts self.class.name
+      puts "ElasticSearch server is currently #{%w{stopped running}[es_pid.nil? ? 0 : 1 ]}."
     end
 
 
