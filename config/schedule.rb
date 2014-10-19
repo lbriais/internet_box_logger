@@ -24,7 +24,7 @@ set :output, "#{path}/log/cron.log"
 # job_type :script, "'#{path}/script/:task' :output"
 
 # Default interval
-# To actually set the default interval, use elastic_interval in your application config
+# To actually set the default interval, use cron_interval in your application config
 @interval ||= 1
 
 every @interval.to_i.minute do
