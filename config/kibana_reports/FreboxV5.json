@@ -635,14 +635,14 @@
           "type": "terms",
           "title": "Top 10 terms in field _type",
           "exclude": [],
-          "missing": true,
-          "other": true,
+          "missing": false,
+          "other": false,
           "size": 10,
           "order": "count",
           "style": {
             "font-size": "10pt"
           },
-          "donut": false,
+          "donut": true,
           "tilt": false,
           "labels": true,
           "arrangement": "horizontal",

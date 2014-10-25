@@ -38,14 +38,13 @@ module InternetBoxLogger
               name: data_name,
               description: name,
               value: attributes[data_name.to_sym]
-
-
           }
           es_object[:body] = data
           res << es_object
         end
       end
       generic_info = {}
+
       attributes.each do |attr_name, content|
         next if attr_name.length > 3 && self.class.up_down_reports.keys.include?(attr_name[0...attr_name.length-3].to_sym)
         generic_info[attr_name] = content
