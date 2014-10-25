@@ -430,7 +430,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "30s",
+          "interval": "10m",
           "intervals": [
             "auto",
             "1s",
@@ -504,7 +504,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "30s",
+          "interval": "10m",
           "intervals": [
             "auto",
             "1s",
@@ -578,7 +578,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "30s",
+          "interval": "10m",
           "intervals": [
             "auto",
             "1s",
@@ -849,12 +849,12 @@
     "save_default": true,
     "save_temp": true,
     "save_temp_ttl_enable": true,
-    "save_temp_ttl": "30d",
+    "save_temp_ttl": "60d",
     "load_gist": false,
     "load_elasticsearch": true,
     "load_elasticsearch_size": 20,
     "load_local": false,
     "hide": false
   },
-  "refresh": false
+  "refresh": "30s"
 }

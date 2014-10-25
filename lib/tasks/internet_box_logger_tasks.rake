@@ -65,7 +65,9 @@ namespace :internet_box_logger do
 
 
     desc 'Loads default JSON reports into ElasticSearch for Kibana display'
-    task :freebox_report
+    task :load_reports do
+
+    end
 
   end
 
