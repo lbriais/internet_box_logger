@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-#  
+#
 #
 # Copyright (c) 2014 L.Briais under MIT license
 # http://opensource.org/licenses/MIT
@@ -30,12 +30,16 @@ module InternetBoxLogger
         %w(up down).each do |measurement_type|
           data_name = "#{measurement}_#{measurement_type}"
           es_object = {
-              index: self.class.model_name.singular,
-              type: data_name
+              index: "#{self.class.model_name.singular}_#{measurement}",
+              type: measurement_type
           }
           data = {
               created_at: self.created_at,
+              name: data_name,
+              description: name,
               value: attributes[data_name.to_sym]
+
+
           }
           es_object[:body] = data
           res << es_object
@@ -46,11 +50,12 @@ module InternetBoxLogger
         next if attr_name.length > 3 && self.class.up_down_reports.keys.include?(attr_name[0...attr_name.length-3].to_sym)
         generic_info[attr_name] = content
       end
+      generic_info[:name] = "generic"
       res << {
-              index: self.class.model_name.singular,
-              type: :generic,
-              body: generic_info
-          }
+          index: "#{self.class.model_name.singular}_generic",
+          type: :info,
+          body: generic_info
+      }
 
       res
     end

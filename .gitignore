@@ -23,6 +23,9 @@
 /test/dummy/tmp/
 /test/dummy/.sass-cache
 
+# Should not be in the repo as setup by rake task
+/test/dummy/public/kibana
+
 # SASS CSS generation
 /public/stylesheets/.sass-cache/
 
@@ -40,3 +43,4 @@
 # Misc
 /projectFilesBackup/
 /pkg/
+

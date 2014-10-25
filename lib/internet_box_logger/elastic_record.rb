@@ -24,18 +24,20 @@ module ElasticRecord
       end
     end
 
-    def save2
+    def save
+      internal_representation = []
       self.created_at = Time.now
       self.as_es_documents.each do |document|
-          elasticsearch_client.index(**document)
+          internal_representation << elasticsearch_client.index(**document)
       end
       Rails.logger.debug 'Saving to ElasticSearch'
+      @internal_es_representation = internal_representation
       self
     rescue
       Rails.logger.warn 'Unable to save to ElasticSearch !!'
     end
 
-    def save
+    def save_old
       self.created_at = Time.now
       options = {
           index: self.class.model_name.singular,
