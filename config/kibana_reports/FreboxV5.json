@@ -196,9 +196,9 @@
               "desc"
             ]
           },
-          "auto_int": true,
+          "auto_int": false,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "1m",
           "intervals": [
             "auto",
             "1s",
@@ -270,9 +270,9 @@
               "desc"
             ]
           },
-          "auto_int": true,
+          "auto_int": false,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "1m",
           "intervals": [
             "auto",
             "1s",
@@ -325,7 +325,7 @@
           "y_format": "none",
           "grid": {
             "max": null,
-            "min": null
+            "min": 6
           },
           "queries": {
             "mode": "selected",
@@ -344,9 +344,9 @@
               "desc"
             ]
           },
-          "auto_int": true,
+          "auto_int": false,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "1m",
           "intervals": [
             "auto",
             "1s",
@@ -428,9 +428,9 @@
               "desc"
             ]
           },
-          "auto_int": true,
+          "auto_int": false,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "1m",
           "intervals": [
             "auto",
             "1s",
@@ -502,9 +502,9 @@
               "desc"
             ]
           },
-          "auto_int": true,
+          "auto_int": false,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "1m",
           "intervals": [
             "auto",
             "1s",
@@ -576,9 +576,9 @@
               "desc"
             ]
           },
-          "auto_int": true,
+          "auto_int": false,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "1m",
           "intervals": [
             "auto",
             "1s",
