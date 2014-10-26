@@ -66,7 +66,7 @@ namespace :internet_box_logger do
 
     desc 'Loads default JSON reports into ElasticSearch for Kibana display'
     task :load_reports do
-      store_es_kibane_dashboard 'Freebox V5 HD', '/home/laurent/devel/ruby/rails/engines/internet_box_logger/config/kibana_reports/FreboxV5.json'
+      store_es_kibana_dashboard 'Test1', '/home/laurent/devel/ruby/rails/engines/internet_box_logger/config/kibana_reports/FreboxV5.json'
     end
 
   end

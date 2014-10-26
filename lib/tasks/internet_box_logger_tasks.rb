@@ -109,25 +109,25 @@ module InternetBoxLogger
       end
 
 
-      def store_es_kibane_dashboard(dashboard_name, kibana_export_file)
+      def store_es_kibana_dashboard(dashboard_name, kibana_export_file)
         content = JSON.parse File.read(kibana_export_file)
         dashboard_url = "http://#{Rails.configuration.elastic_servers[0]}/kibana-int/dashboard/#{ERB::Util.url_encode dashboard_name}"
 
-        es_response = JSON.parse HTTPClient.new.get(dashboard_url).body
-        found = es_response[:found.to_s]
-        version = found ? es_response[:_version.to_s] + 1 : 1
+        # es_response = JSON.parse HTTPClient.new.get(dashboard_url).body
+        # found = es_response[:found.to_s]
+
         dashboard_document = {
             _id: dashboard_name,
             _index: 'kibana-int',
             _source: {
-                dashboard: content,
+                dashboard: content.to_json,
                 group: 'guest',
                 title: dashboard_name,
                 user: 'guest'
             },
-            _type: 'dashboard',
-            _version: version,
+            _type: 'dashboard'
         }
+        HTTPClient.new.put dashboard_url, dashboard_document.to_json
 
         puts dashboard_document.to_json
       end
