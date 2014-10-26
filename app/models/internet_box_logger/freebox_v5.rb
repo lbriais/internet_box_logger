@@ -46,7 +46,7 @@ module InternetBoxLogger
       generic_info = {}
 
       attributes.each do |attr_name, content|
-        next if attr_name.length > 3 && self.class.up_down_reports.keys.include?(attr_name[0...attr_name.length-3].to_sym)
+        next if attr_name.length > 3 && self.class.up_down_reports.keys.include?(attr_name.to_s.gsub(/_(up|down)$/, '').to_sym)
         generic_info[attr_name] = content
       end
       generic_info[:name] = "generic"

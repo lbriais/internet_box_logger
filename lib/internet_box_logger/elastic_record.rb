@@ -17,7 +17,7 @@ module ElasticRecord
 
     attr_accessor :internal_es_representation
 
-    def initialize attributes={}
+    def initialize(attributes={})
       attributes.each do |k, v|
         puts k.to_sym
         self.attributes[k.to_sym] = v if self.class.attributes.include? k.to_sym
