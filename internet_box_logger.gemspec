@@ -1,31 +1,30 @@
-$:.push File.expand_path('../lib', __FILE__)
-
-# Maintain your gem's version:
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'internet_box_logger/version'
 
-# Describe your gem and declare its dependencies:
-Gem::Specification.new do |s|
-  s.name        = 'internet_box_logger'
-  s.version     = InternetBoxLogger::VERSION
-  s.authors     = ['L.Briais']
-  s.email       = ['lbnetid+rb@gmail.com']
-  s.homepage    = 'https://github.com/lbriais/easy_app_helper'
-  s.summary     = 'Rails engine that records stats from your internet box into elactic search.'
-  s.description = 'Rails engine that records stats from your internet box into elactic search for potential later view into kibana.'
+Gem::Specification.new do |spec|
+  spec.name          = 'internet_box_logger'
+  spec.version       = InternetBoxLogger::VERSION
+  spec.authors       = ['Laurent Briais']
+  spec.email         = ['lbriais@amadeus.com']
+  spec.summary       = %q{Monitor your internet box.}
+  spec.description   = %q{Logs information gathered from your internet box and stores into ElasticSearch for display into Kibana.}
+  spec.homepage      = ''
+  spec.license       = 'MIT'
 
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
-  s.test_files = Dir["spec/**/*"]
+  spec.files         = `git ls-files -z`.split("\x0")
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ['lib']
 
-  s.add_dependency 'rails', '~> 4.0.3'
-  s.add_dependency 'elasticsearch'
-  s.add_dependency 'whenever'
+  spec.add_development_dependency 'bundler', '~> 1.6'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'pry'
 
-  s.add_development_dependency "sqlite3"
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'capybara'
-  s.add_development_dependency 'factory_girl_rails'
-  s.add_development_dependency 'httpclient'
-
-  s.add_development_dependency 'pry'
+  spec.add_dependency 'whenever'
+  spec.add_dependency 'httpclient'
+  # Temporarily de-activated
+  # spec.add_dependency 'easy_app_helper'
 end

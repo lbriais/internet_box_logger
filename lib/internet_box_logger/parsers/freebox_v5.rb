@@ -1,5 +1,3 @@
-
-
 require 'open-uri'
 
 module InternetBoxLogger
@@ -86,7 +84,7 @@ module InternetBoxLogger
         }
 
         def etl
-          self.new.parse_status_page
+          self.new.get_box_data
         end
 
         def up_down_reports
@@ -94,7 +92,7 @@ module InternetBoxLogger
         end
       end
 
-      def parse_status_page
+      def get_box_data
         parser = ETL_DATA.dup
         current_parser = nil
         @last_raw_status = []
@@ -105,13 +103,13 @@ module InternetBoxLogger
           begin
             current_parser = parser.shift if current_parser.nil?
           rescue
-            Rails.logger.info "Got all data. Do not parse the rest of the data."
+            EasyAppHelper.logger.info "Got all data. Do not parse the rest of the data."
             skip_parsing = true
           end
           break if current_parser.nil?
           line.encode('utf-8').match current_parser do |md|
             md.names.each do |field|
-              Rails.logger.info "#{field} => #{md[field]}"
+              EasyAppHelper.logger.info "#{field} => #{md[field]}"
               self.send "#{field}=", normalize_value(field.to_sym, md)
               current_parser = nil
             end
@@ -125,48 +123,48 @@ module InternetBoxLogger
       CONSIDERED_TRUE = %w(actif active activée activé ok true connectée connecté on décroché 1)
       CONSIDERED_FALSE = %w(inactif inactive desactivé desactivée deconnecté deconnectée désactivé désactivée déconnecté déconnectée ko false off raccroché 0)
 
-      def normalize_value field_name, match_data
+      def normalize_value(field_name, match_data)
         return match_data[field_name] unless ETL_POST_PROCESSING[field_name]
         self.send ETL_POST_PROCESSING[field_name], field_name, match_data[field_name]
       end
 
-      def to_int field_name, value_to_convert
+      def to_int(field_name, value_to_convert)
         value_to_convert.match /^(?<num_value>[[:digit:]]+)$/i do |md|
           return md[:num_value].to_i
         end
-        Rails.logger.warn "Cannot convert #{value_to_convert.inspect} to integer for field #{field_name} !"
+        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to integer for field #{field_name} !"
         nil
       end
 
-      def to_num field_name, value_to_convert
+      def to_num(field_name, value_to_convert)
         value_to_convert.match /^(?<num_value>[[:digit:]\.\s,]+)$/i do |md|
           return md[:num_value].to_f
         end
-        Rails.logger.warn "Cannot convert #{value_to_convert.inspect} to num for field #{field_name} !"
+        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to num for field #{field_name} !"
         nil
       end
 
-      def to_db field_name, value_to_convert
+      def to_db(field_name, value_to_convert)
         value_to_convert.match /^(?<num_value>.+) db$/i do |md|
           return to_num(field_name, md[:num_value])
         end
-        Rails.logger.warn "Cannot convert #{value_to_convert.inspect} to db for field #{field_name} !"
+        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to db for field #{field_name} !"
         nil
       end
 
-      def to_bool field_name, value_to_convert
+      def to_bool(field_name, value_to_convert)
         CONSIDERED_TRUE.each do |val|
           return true if value_to_convert.match /^#{val}$/i
         end
         CONSIDERED_FALSE.each do |val|
           return false if value_to_convert.match /^#{val}$/i
         end
-        Rails.logger.warn "Cannot convert #{value_to_convert.inspect} to boolean for field #{field_name} !"
+        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to boolean for field #{field_name} !"
         nil
       end
 
 
-      def to_duration field_name, value_to_convert
+      def to_duration(field_name, value_to_convert)
         # 9 jours, 22 heures, 42 minutes
         value_to_convert.match /(?<days>\d+)\s*jours?,\s*(?<hours>\d+)\s*heures?,\s*(?<minutes>\d+)\s*minutes?/i do |md|
           d = md[:days].present? ? md[:days].to_i : 0
@@ -174,22 +172,25 @@ module InternetBoxLogger
           m = md[:minutes].present? ? md[:minutes].to_i : 0
           return d.days + h.hours + m.minutes
         end
-        Rails.logger.warn "Cannot convert #{value_to_convert.inspect} to time duration (integer) for field #{field_name} !"
+        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to time duration (integer) for field #{field_name} !"
         nil
       end
 
 
-      def to_bandwidth field_name, value_to_convert
+      def to_bandwidth(field_name, value_to_convert)
         value_to_convert.match /^\s*(?<val>[\d\.]+)\s+(?<unit>[kKMmGg])b\/s/ do |md|
           mult = case md[:unit]
-                   when 'k', 'K' then 1024
-                   when 'm', 'M' then 1024 * 1024
-                   when 'g', 'G' then 1024 * 1024
+                   when 'k', 'K' then
+                     1024
+                   when 'm', 'M' then
+                     1024 * 1024
+                   when 'g', 'G' then
+                     1024 * 1024
                  end
           return md[:val].to_f * mult
         end
 
-        Rails.logger.warn "Cannot convert #{value_to_convert.inspect} to time duration (integer) for field #{field_name} !"
+        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to time duration (integer) for field #{field_name} !"
         nil
       end
 

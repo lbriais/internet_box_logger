@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+require 'internet_box_logger'
+
+module InternetBoxLogger
+  class Script
+    include EasyAppHelper
+
+    APP_NAME = 'The Internet Box Logger'
+    VERSION = '0.0.1'
+    DESCRIPTION = 'This application will log your Internet box activity into ElasticSearch and provide a Kibana report.'
+
+    def initialize
+      # Providing this data is optional but brings better logging and online help
+      config.describes_application(app_name: APP_NAME, app_version: VERSION, app_description: DESCRIPTION)
+    end
+
+    def run
+      if config[:help]
+        puts config.help
+        exit 0
+      end
+      puts_and_logs 'Application is starting'
+      log_box_information
+    end
+
+    def log_box_information
+
+    end
+
+  end
+end
+
+InternetBoxLogger::Script.new.run
