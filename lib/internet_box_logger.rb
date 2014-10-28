@@ -1,4 +1,5 @@
 require 'internet_box_logger/version'
+require 'internet_box_logger/elastic_search'
 require 'internet_box_logger/generic_box'
 require 'easy_app_helper'
 

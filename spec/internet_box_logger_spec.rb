@@ -13,7 +13,10 @@ describe InternetBoxLogger do
     InternetBoxLogger::Parsers.list.each do |parser|
       expect{ subject.get_box(parser)}.not_to raise_error
     end
+  end
 
+  it 'should use the default box type if not provided' do
+    expect{ subject.get_box}.not_to raise_error
   end
 
   it 'should include a parser of the box_type specified in the constructor' do
