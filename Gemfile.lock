@@ -2,14 +2,9 @@ PATH
   remote: .
   specs:
     internet_box_logger (0.1.0)
+      easy_app_helper
       httpclient
       whenever
-
-PATH
-  remote: ../../../gems/easy_app_helper
-  specs:
-    easy_app_helper (1.0.10)
-      slop
 
 GEM
   remote: https://rubygems.org/
@@ -17,6 +12,8 @@ GEM
     chronic (0.10.2)
     coderay (1.1.0)
     diff-lcs (1.2.5)
+    easy_app_helper (1.0.10)
+      slop
     httpclient (2.5.1)
     method_source (0.8.2)
     pry (0.10.1)
@@ -44,8 +41,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.6)
-  easy_app_helper!
+  bundler
   internet_box_logger!
   pry
   rake
