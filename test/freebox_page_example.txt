@@ -1,0 +1,103 @@
+______________________________________________________________________
+
+                      Etat de la Freebox                           
+______________________________________________________________________
+
+
+Informations g�n�rales :
+========================
+
+  Mod�le                         Freebox ADSL            
+  Version du firmware            1.5.20                  
+  Mode de connection             D�group�                
+  Temps depuis la mise en route  9 jours, 22 heures, 39 minutes
+
+
+T�l�phone :
+===========
+
+  Etat                           Ok                      
+  Etat du combin�                Raccroch�               
+  Sonnerie                       Inactive                
+
+
+Adsl :
+======
+
+  Etat                           Showtime                
+  Protocole                      ADSL2+                  
+  Mode                           Interleaved             
+
+                         Descendant         Montant           
+                         --                 --                
+  D�bit ATM              8225 kb/s          1025 kb/s         
+  Marge de bruit         7.60 dB            7.40 dB           
+  Att�nuation            30.50 dB           15.30 dB          
+  FEC                    1051889            1769255           
+  CRC                    2164               0                 
+  HEC                    101                149402            
+
+ Journal de connexion adsl :
+ ---------------------------
+
+  Date                   Etat               D�bit (kb/s)      
+  --                     --                 --                
+  Mise en route          Connexion          10292 / 1025      
+
+
+Wifi :
+======
+
+  Etat                           WiFi d�sactiv�          
+  Mod�le                         Ralink RT2880           
+  Canal                          3                       
+  �tat du r�seau                 D�sactiv�               
+  FreeWifi                       D�sactiv�               
+  FreeWifi Secure                D�sactiv�               
+
+
+R�seau :
+========
+
+  Adresse MAC Freebox            01:23:45:67:89:01       
+  Adresse IP                     88.111.111.111           
+  IPv6                           D�sactiv�               
+  Mode routeur                   Activ�                  
+  Adresse IP priv�e              192.168.0.254
+  Adresse IP DMZ                 192.168.0.0
+  Adresse IP Freeplayer          192.168.0.2
+  R�ponse au ping                Activ�                  
+  Proxy Wake On Lan              D�sactiv�               
+  Serveur DHCP                   Activ�                  
+  Plage d'adresses dynamique     192.168.0.10 - 192.168.0.50
+
+ Attributions dhcp :
+ -------------------
+
+  Adresse MAC            Adresse IP                  
+  --                     --                          
+  01:32:54:76:98:10      192.168.0.10
+
+ Redirections de ports :
+ -----------------------
+
+  Protocole              Port source    Destination    Port destination
+  --                     --             --             --            
+  UDP                    11223          192.168.0.10 1194
+
+ Redirections de plage de ports :
+ --------------------------------
+
+  Protocole              Destination        Plage de redirection
+  --                     --                 --                
+  TCP                    192.168.0.10     4455 - 5566
+
+ Interfaces r�seau :
+ -------------------
+
+                         Lien           D�bit entrant  D�bit sortant 
+                         --             --             --            
+  WAN                    Ok             16 ko/s        1 ko/s        
+  Ethernet                              0 ko/s         0 ko/s        
+  USB                    Non connect�                                
+  Switch                 100baseTX-FD   1 ko/s         228 ko/s      

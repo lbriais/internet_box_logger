@@ -7,5 +7,9 @@ module InternetBoxLogger
       self.extend box_type
     end
 
+    def log_box_info
+
+    end
+
   end
 end
