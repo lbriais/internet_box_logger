@@ -3,7 +3,7 @@ PATH
   specs:
     internet_box_logger (0.1.0)
       easy_app_helper
-      httpclient
+      elasticsearch
       whenever
 
 GEM
@@ -14,8 +14,19 @@ GEM
     diff-lcs (1.2.5)
     easy_app_helper (1.0.10)
       slop
-    httpclient (2.5.1)
+    elasticsearch (1.0.0)
+      elasticsearch-api (= 1.0.0)
+      elasticsearch-transport (= 1.0.0)
+    elasticsearch-api (1.0.0)
+      multi_json
+    elasticsearch-transport (1.0.0)
+      faraday
+      multi_json
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
     method_source (0.8.2)
+    multi_json (1.10.1)
+    multipart-post (2.0.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
