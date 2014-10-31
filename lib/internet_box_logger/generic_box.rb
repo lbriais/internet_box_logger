@@ -1,3 +1,4 @@
+require 'internet_box_logger/parsers/utils'
 require 'internet_box_logger/parsers/freebox_v5'
 
 module InternetBoxLogger

@@ -4,9 +4,12 @@ module InternetBoxLogger
   module Parsers
     module FreeboxV5
 
-      STATUS_URL = 'http://mafreebox.free.fr/pub/fbx_info.txt'
+      include EasyAppHelper
+      include InternetBoxLogger::Parsers::Utils
 
-      ETL_DATA = [
+      DEFAULT_STATUS_URL = 'http://mafreebox.free.fr/pub/fbx_info.txt'
+
+      EXPECTED_LINES = [
           /version du firmware\s+(?<firmware_version>[\d\.]+)\s*$/i ,
           /mode de connection\s+(?<connection_mode>[[:alpha:]]+)\s*$/i ,
           /temps depuis la mise en route\s+(?<up_time>.*)$/i ,
@@ -39,7 +42,7 @@ module InternetBoxLogger
           /plage d'adresses dynamiques?\s+(?<network_dhcp_range>[\d\.\s-]+[^\s])\s*$/i ,
       ]
 
-      ETL_POST_PROCESSING = {
+      FIELD_POST_PROCESSING = {
           up_time: :to_duration,
           phone_status: :to_bool,
           phone_hanged_up: :to_bool,
@@ -67,134 +70,54 @@ module InternetBoxLogger
           adsl_hec_down: :to_num,
       }
 
+      UP_DOWN_REPORTS = {
+          adsl_noise_margin: 'Noise Margin',
+          adsl_atm_bandwidth: 'ATM Bandwidth',
+          adsl_attenuation: 'Attenuation',
+          adsl_crc: 'CRC',
+          adsl_fec: 'FEC',
+          adsl_hec: 'HEC'
+      }
 
-      def self.included(base) # :nodoc:
-        base.extend ClassMethods
-      end
+      attr_accessor :raw_data, :attributes
 
-
-      module ClassMethods
-        UP_DOWN_REPORTS = {
-            adsl_noise_margin: 'Noise Margin',
-            adsl_atm_bandwidth: 'ATM Bandwidth',
-            adsl_attenuation: 'Attenuation',
-            adsl_crc: 'CRC',
-            adsl_fec: 'FEC',
-            adsl_hec: 'HEC'
-        }
-
-        def etl
-          self.new.get_box_data
-        end
-
-        def up_down_reports
-          UP_DOWN_REPORTS
-        end
+      def get_status_url
+        config[:freebox_alternate_url] ? config[:freebox_alternate_url] : DEFAULT_STATUS_URL
       end
 
       def get_box_data
-        parser = ETL_DATA.dup
-        current_parser = nil
-        @last_raw_status = []
+        regexp_list = EXPECTED_LINES.dup
+        current_regexp = nil
+        @raw_data, @attributes = [], {}
         skip_parsing = false
-        open(STATUS_URL).readlines.each do |line|
-          @last_raw_status << line
+        open(get_status_url).readlines.each do |line|
+          @raw_data << line
           next if skip_parsing
           begin
-            current_parser = parser.shift if current_parser.nil?
+            current_regexp = regexp_list.shift if current_regexp.nil?
           rescue
-            EasyAppHelper.logger.info "Got all data. Do not parse the rest of the data."
+            EasyAppHelper.logger.info 'Got all data. Do not parse the rest of the data.'
             skip_parsing = true
           end
-          break if current_parser.nil?
-          line.encode('utf-8').match current_parser do |md|
+          break if current_regexp.nil?
+          line.encode('utf-8').match current_regexp do |md|
             md.names.each do |field|
               EasyAppHelper.logger.info "#{field} => #{md[field]}"
-              self.send "#{field}=", normalize_value(field.to_sym, md)
-              current_parser = nil
+              @attributes[field.to_sym] = normalize_value(field.to_sym, md)
+              current_regexp = nil
             end
           end
         end
         self
       end
 
-      private
-
-      CONSIDERED_TRUE = %w(actif active activée activé ok true connectée connecté on décroché 1)
-      CONSIDERED_FALSE = %w(inactif inactive desactivé desactivée deconnecté deconnectée désactivé désactivée déconnecté déconnectée ko false off raccroché 0)
 
       def normalize_value(field_name, match_data)
-        return match_data[field_name] unless ETL_POST_PROCESSING[field_name]
-        self.send ETL_POST_PROCESSING[field_name], field_name, match_data[field_name]
+        return match_data[field_name] unless FIELD_POST_PROCESSING[field_name]
+        self.send FIELD_POST_PROCESSING[field_name], field_name, match_data[field_name]
       end
 
-      def to_int(field_name, value_to_convert)
-        value_to_convert.match /^(?<num_value>[[:digit:]]+)$/i do |md|
-          return md[:num_value].to_i
-        end
-        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to integer for field #{field_name} !"
-        nil
-      end
-
-      def to_num(field_name, value_to_convert)
-        value_to_convert.match /^(?<num_value>[[:digit:]\.\s,]+)$/i do |md|
-          return md[:num_value].to_f
-        end
-        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to num for field #{field_name} !"
-        nil
-      end
-
-      def to_db(field_name, value_to_convert)
-        value_to_convert.match /^(?<num_value>.+) db$/i do |md|
-          return to_num(field_name, md[:num_value])
-        end
-        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to db for field #{field_name} !"
-        nil
-      end
-
-      def to_bool(field_name, value_to_convert)
-        CONSIDERED_TRUE.each do |val|
-          return true if value_to_convert.match /^#{val}$/i
-        end
-        CONSIDERED_FALSE.each do |val|
-          return false if value_to_convert.match /^#{val}$/i
-        end
-        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to boolean for field #{field_name} !"
-        nil
-      end
-
-
-      def to_duration(field_name, value_to_convert)
-        # 9 jours, 22 heures, 42 minutes
-        value_to_convert.match /(?<days>\d+)\s*jours?,\s*(?<hours>\d+)\s*heures?,\s*(?<minutes>\d+)\s*minutes?/i do |md|
-          d = md[:days].present? ? md[:days].to_i : 0
-          h = md[:hours].present? ? md[:hours].to_i : 0
-          m = md[:minutes].present? ? md[:minutes].to_i : 0
-          return d.days + h.hours + m.minutes
-        end
-        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to time duration (integer) for field #{field_name} !"
-        nil
-      end
-
-
-      def to_bandwidth(field_name, value_to_convert)
-        value_to_convert.match /^\s*(?<val>[\d\.]+)\s+(?<unit>[kKMmGg])b\/s/ do |md|
-          mult = case md[:unit]
-                   when 'k', 'K' then
-                     1024
-                   when 'm', 'M' then
-                     1024 * 1024
-                   when 'g', 'G' then
-                     1024 * 1024
-                 end
-          return md[:val].to_f * mult
-        end
-
-        EasyAppHelper.logger.warn "Cannot convert #{value_to_convert.inspect} to time duration (integer) for field #{field_name} !"
-        nil
-      end
 
     end
-
   end
 end
