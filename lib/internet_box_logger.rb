@@ -7,7 +7,7 @@ module InternetBoxLogger
 
   module Parsers
     def self.list
-      constants.dup.keep_if {|c| const_get(c.to_s).is_a? Module}.map {|m| const_get m}
+      constants.dup.keep_if {|c| const_get(c.to_s).is_a? Module}.delete_if {|m| m =~ /Utils$/ } .map {|m| const_get m}
     end
   end
 
