@@ -2,7 +2,7 @@ require 'open-uri'
 
 module InternetBoxLogger
   module Parsers
-    module FreeboxV5
+    module FreeboxV5Parser
 
       include EasyAppHelper
       include InternetBoxLogger::Parsers::Utils

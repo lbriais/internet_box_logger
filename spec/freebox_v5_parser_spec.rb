@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe InternetBoxLogger::Parsers::FreeboxV5 do
+describe InternetBoxLogger::Parsers::FreeboxV5Parser do
 
   subject {
     s = Object.new
     class << s
-      include InternetBoxLogger::Parsers::FreeboxV5
+      include InternetBoxLogger::Parsers::FreeboxV5Parser
     end
     s
   }
