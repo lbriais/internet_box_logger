@@ -108,7 +108,8 @@ module InternetBoxLogger
             end
           end
         end
-        self
+        # Check if the parsing has been complete
+        regexp_list.empty? ? self : nil
       end
 
 

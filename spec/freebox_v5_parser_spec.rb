@@ -21,8 +21,7 @@ describe InternetBoxLogger::Parsers::FreeboxV5Parser do
   end
 
   it 'should use all regexp during parsing'  do
-    subject.get_box_data
-    puts subject.attributes.to_yaml
+    expect(subject.get_box_data).not_to be_nil
   end
 
 end
