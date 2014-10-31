@@ -24,4 +24,9 @@ describe InternetBoxLogger::Parsers::FreeboxV5Parser do
     expect(subject.get_box_data).not_to be_nil
   end
 
+  it 'should export data as an array' do
+    subject.get_box_data
+    expect(subject.as_es_documents is_a? Array).to be_truthy
+  end
+
 end

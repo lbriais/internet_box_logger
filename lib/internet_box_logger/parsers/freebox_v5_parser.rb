@@ -85,6 +85,10 @@ module InternetBoxLogger
         config[:freebox_alternate_url] ? config[:freebox_alternate_url] : DEFAULT_STATUS_URL
       end
 
+      def up_down_reports
+        UP_DOWN_REPORTS
+      end
+
       def get_box_data
         regexp_list = EXPECTED_LINES.dup
         current_regexp = nil
