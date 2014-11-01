@@ -6,9 +6,10 @@ require 'internet_box_logger/generic_box'
 module InternetBoxLogger
 
   module Parsers
-    def self.list
+    def self.[]
       constants.dup.keep_if {|c| const_get(c.to_s).is_a? Module and c.to_s =~ /\wParser$/ } .map {|m| const_get m}
     end
+
   end
 
   def self.get_box(box_type=EasyAppHelper.config[:box_type])

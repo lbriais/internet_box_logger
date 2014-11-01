@@ -9,7 +9,7 @@ module InternetBoxLogger
     def initialize(box_type)
       box_type = box_type.to_s if box_type.is_a? Symbol
       box_type = self.class.const_get box_type if box_type.is_a? String
-      box_parser_module = box_type if InternetBoxLogger::Parsers.list.include? box_type
+      box_parser_module = box_type if InternetBoxLogger::Parsers[].include? box_type
       self.extend box_parser_module
     end
 

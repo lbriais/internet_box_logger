@@ -10,7 +10,7 @@ describe InternetBoxLogger do
   end
 
   it 'should accept any valid parser' do
-    InternetBoxLogger::Parsers.list.each do |parser|
+    InternetBoxLogger::Parsers[].each do |parser|
       expect{ subject.get_box(parser)}.not_to raise_error
     end
   end
