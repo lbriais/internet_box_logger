@@ -21,8 +21,16 @@
 
 # Default interval
 # To actually set the default interval, use cron_interval in your application config
+require 'active_support/all'
+
 @interval ||= 1
 
+this_gem_path = File.expand_path('../..', __FILE__)
+set :path, this_gem_path
+set :output, "#{this_gem_path}/log/cron.log"
+
+job_type :ruby_script,  'cd :path && bundle exec ruby bin/:task :output'
+
 every @interval.to_i.minute do
-  command 'echo toto > /tmp/TSTTOTO'
+  ruby_script 'internet_box_logger'
 end
