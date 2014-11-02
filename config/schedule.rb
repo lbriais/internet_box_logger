@@ -18,3 +18,11 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+# Default interval
+# To actually set the default interval, use cron_interval in your application config
+@interval ||= 1
+
+every @interval.to_i.minute do
+  command 'echo toto > /tmp/TSTTOTO'
+end

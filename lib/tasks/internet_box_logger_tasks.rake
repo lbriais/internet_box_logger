@@ -7,7 +7,6 @@ namespace :internet_box_logger do
 
   task :booted_environment do
     require 'internet_box_logger'
-    puts  File.expand_path "#{ibl_gem_path}/config/internet_box_logger.conf", __FILE__
     EasyAppHelper.config.script_filename = File.expand_path "#{ibl_gem_path}/config/internet_box_logger.conf", __FILE__
   end
 
@@ -81,7 +80,7 @@ namespace :internet_box_logger do
     include InternetBoxLogger::Tasks::Cron
 
     desc 'Setup cron to gather information every x minutes (configurable)'
-    task :setup => :environment do
+    task :setup => :booted_environment do
       puts "Using Whenever config file: '#{whenever_conf_file}' with interval #{EasyAppHelper.config[:cron_interval]}"
       rake_system "whenever -f '#{whenever_conf_file}' -i '#{whenever_conf_file}' -s interval='#{EasyAppHelper.config[:cron_interval]}'"
       puts 'Crontab updated'

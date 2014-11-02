@@ -1,5 +1,3 @@
-require 'internet_box_logger/parsers/utils'
-require 'internet_box_logger/parsers/freebox_v5_parser'
 
 module InternetBoxLogger
   class GenericBox
