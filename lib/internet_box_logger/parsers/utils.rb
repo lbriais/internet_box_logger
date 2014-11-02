@@ -75,7 +75,7 @@ module InternetBoxLogger
           %w(up down).each do |measurement_type|
             data_name = "#{measurement}_#{measurement_type}"
             es_object = {
-                index: "#{self.class.name}_#{measurement}",
+                index: "#{self.class.name.underscore.tr('/', '_')}_#{measurement}",
                 type: measurement_type
             }
             data = {
@@ -96,7 +96,7 @@ module InternetBoxLogger
         end
         generic_info[:name] = 'generic'
         res << {
-            index: "#{self.class.name}_generic",
+            index: "#{self.class.name.underscore.tr('/', '_')}_generic",
             type: :info,
             body: generic_info
         }

@@ -12,7 +12,7 @@ module InternetBoxLogger
     end
 
     def log_box_info
-
+      save if get_box_data
     end
 
 

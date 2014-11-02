@@ -36,9 +36,7 @@ module InternetBoxLogger
 
 
     def elasticsearch_client
-      @elasticsearch_client ||= Elasticsearch::Client.new hosts: Server[],
-                                                          log: true,
-                                                          reload_connections: true
+      @elasticsearch_client ||= Elasticsearch::Client.new hosts: Server[], log: true, reload_connections: true
     end
 
     def save
@@ -46,11 +44,11 @@ module InternetBoxLogger
       self.as_es_documents.each do |document|
         internal_representation << elasticsearch_client.index(**document)
       end
-      logger.debug 'Saving to ElasticSearch'
+      EasyAppHelper.logger.debug 'Saving to ElasticSearch'
       @internal_es_representation = internal_representation
       self
     rescue
-      logger.warn 'Unable to save to ElasticSearch !!'
+      EasyAppHelper.logger.error 'Unable to save to ElasticSearch !!'
     end
 
   end

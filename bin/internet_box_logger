@@ -24,7 +24,7 @@ module InternetBoxLogger
     end
 
     def log_box_information
-      InternetBoxLogger.get_box
+      InternetBoxLogger.get_box.log_box_info
     end
 
   end

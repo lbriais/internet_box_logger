@@ -1,4 +1,5 @@
 require 'active_support/all'
+require 'elasticsearch'
 require 'easy_app_helper'
 
 require 'internet_box_logger/version'
