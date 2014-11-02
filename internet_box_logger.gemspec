@@ -6,8 +6,8 @@ require 'internet_box_logger/version'
 Gem::Specification.new do |spec|
   spec.name          = 'internet_box_logger'
   spec.version       = InternetBoxLogger::VERSION
-  spec.authors       = ['Laurent Briais']
-  spec.email         = ['lbriais@amadeus.com']
+  spec.authors       = ['Laurent B']
+  spec.email         = ['lbnetid+gh@gmail.com']
   spec.summary       = %q{Monitor your internet box.}
   spec.description   = %q{Logs information gathered from your internet box and stores into ElasticSearch for display into Kibana.}
   spec.homepage      = ''
