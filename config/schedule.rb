@@ -29,7 +29,7 @@ this_gem_path = File.expand_path('../..', __FILE__)
 set :path, this_gem_path
 set :output, "#{this_gem_path}/log/cron.log"
 
-job_type :ruby_script,  'cd :path && bundle exec ruby bin/:task :output'
+job_type :ruby_script, 'cd :path && bundle exec ruby bin/:task :output'
 
 every @interval.to_i.minute do
   ruby_script 'internet_box_logger'
