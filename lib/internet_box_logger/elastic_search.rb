@@ -17,7 +17,18 @@ module InternetBoxLogger
         !remote?
       end
 
+      def self.manageable?
+        !(remote? || local_path.nil?)
+      end
+
       def self.remote?
+        # res = true
+        # return nil if Server[].nil? || Server.empty?
+        # Server[].each do |addr|
+        #   if
+        #
+        #   end
+        # end
         local_path.nil?
       end
 
