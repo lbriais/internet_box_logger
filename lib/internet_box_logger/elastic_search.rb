@@ -3,8 +3,31 @@ module InternetBoxLogger
 
     include EasyAppHelper
 
+    module Server
+
+      def self.[]
+        EasyAppHelper.config[:elastic_servers] || EasyAppHelper.config[:default_elastic_search]['elastic_servers']
+      end
+
+      def self.local_path
+        EasyAppHelper.config[:elastic_binary] || EasyAppHelper.config[:default_elastic_search]['elastic_binary']
+      end
+
+      def self.local?
+        !remote?
+      end
+
+      def self.remote?
+        local_path.nil?
+      end
+
+    end
+
+
+
+
     def elasticsearch_client
-      @elasticsearch_client ||= Elasticsearch::Client.new hosts: config[:elastic_servers],
+      @elasticsearch_client ||= Elasticsearch::Client.new hosts: Server[],
                                                           log: true,
                                                           reload_connections: true
     end
