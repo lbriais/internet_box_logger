@@ -5,22 +5,19 @@ namespace :internet_box_logger do
 
   include InternetBoxLogger::Tasks
 
+  task :booted_environment do
+    require 'internet_box_logger'
+    puts  File.expand_path "#{ibl_gem_path}/config/internet_box_logger.conf", __FILE__
+    EasyAppHelper.config.script_filename = File.expand_path "#{ibl_gem_path}/config/internet_box_logger.conf", __FILE__
+  end
 
   # ElasticSearch tasks
   namespace :es do
 
     include InternetBoxLogger::Tasks::ElasticSearch
 
-
-    task :booted_environment do
-      require 'internet_box_logger'
-      puts  File.expand_path "#{ibl_gem_path}/config/internet_box_logger.conf", __FILE__
-      EasyAppHelper.config.script_filename = File.expand_path "#{ibl_gem_path}/config/internet_box_logger.conf", __FILE__
-    end
-
-
     desc 'Starts your local ElasticSearch server'
-    task :start do
+    task :start => :booted_environment  do
       if already_running?
         puts 'ElasticSearch already running... Aborting'
         next
@@ -85,8 +82,8 @@ namespace :internet_box_logger do
 
     desc 'Setup cron to gather information every x minutes (configurable)'
     task :setup => :environment do
-      puts "Using Whenever config file: '#{whenever_conf_file}' with interval #{Rails.configuration.cron_interval}"
-      rake_system "whenever -f '#{whenever_conf_file}' -i '#{whenever_conf_file}' -s interval='#{Rails.configuration.cron_interval}'"
+      puts "Using Whenever config file: '#{whenever_conf_file}' with interval #{EasyAppHelper.config[:cron_interval]}"
+      rake_system "whenever -f '#{whenever_conf_file}' -i '#{whenever_conf_file}' -s interval='#{EasyAppHelper.config[:cron_interval]}'"
       puts 'Crontab updated'
     end
 
@@ -98,9 +95,9 @@ namespace :internet_box_logger do
     end
 
     desc 'Show your Cron config'
-    task :info => :environment do
+    task :info => :booted_environment do
       puts "Whenever config file used = #{whenever_conf_file}'"
-      puts "config.cron_interval = #{Rails.configuration.cron_interval}"
+      puts "config.cron_interval = #{EasyAppHelper.config[:cron_interval]}"
     end
   end
 

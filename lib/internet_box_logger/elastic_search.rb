@@ -18,7 +18,7 @@ module InternetBoxLogger
       end
 
       def self.manageable?
-        !(remote? || local_path.nil?)
+        !(remote? || local_path.nil? )
       end
 
       def self.remote?
