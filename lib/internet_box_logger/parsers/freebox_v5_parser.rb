@@ -4,7 +4,6 @@ module InternetBoxLogger
   module Parsers
     module FreeboxV5Parser
 
-      include EasyAppHelper
       include InternetBoxLogger::Parsers::Utils
 
       DEFAULT_STATUS_URL = 'http://mafreebox.free.fr/pub/fbx_info.txt'
@@ -82,7 +81,7 @@ module InternetBoxLogger
       attr_accessor :raw_data, :attributes
 
       def get_status_url
-        config[:freebox_alternate_url] ? config[:freebox_alternate_url] : DEFAULT_STATUS_URL
+        EasyAppHelper.config[:freebox_alternate_url] ? EasyAppHelper.config[:freebox_alternate_url] : DEFAULT_STATUS_URL
       end
 
       def up_down_reports

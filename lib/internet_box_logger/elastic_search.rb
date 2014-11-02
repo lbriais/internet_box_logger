@@ -1,8 +1,6 @@
 module InternetBoxLogger
   module ElasticSearch
 
-    include EasyAppHelper
-
     module Server
 
       def self.[]
