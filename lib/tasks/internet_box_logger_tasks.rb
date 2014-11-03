@@ -98,6 +98,9 @@ module InternetBoxLogger
 
     module Kibana
 
+      def kibana_path
+        EasyAppHelper.config[:kibana_path]
+      end
 
       def kibana_symlink_path
         "#{EasyAppHelper.config.root}/public/kibana"
