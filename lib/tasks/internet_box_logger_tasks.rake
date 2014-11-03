@@ -52,10 +52,15 @@ namespace :internet_box_logger do
     include InternetBoxLogger::Tasks::Kibana
 
     desc 'Displays Kibana information'
-    task :info do
-      raise "No Kibana installation found in '#{kibana_path}'" unless valid_kibana_path?(kibana_path)
+    task :info => :booted_environment do
+      raise "No Kibana installation found in '#{kibana_path}'. You may want to update 'kibana_path' in your config." unless valid_kibana_path?(kibana_path)
+      puts "A valid Kibana install found in #{kibana_path}"
     end
 
+    desc 'Deploys Kibana reports into Kibana directory'
+    task :deploy => :info do
+
+    end
 
     desc 'Installs Kibana in the vendor directory'
     task :install
