@@ -57,7 +57,7 @@ namespace :internet_box_logger do
       puts "A valid Kibana install found in #{kibana_path}"
     end
 
-    desc 'Deploys Kibana reports into Kibana directory'
+    desc 'Deploys box specific reports into Kibana directory'
     task :deploy => :info do
 
     end
