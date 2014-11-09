@@ -53,34 +53,29 @@ namespace :internet_box_logger do
 
     desc 'Displays Kibana information'
     task :info => :booted_environment do
-      raise "No Kibana installation found in '#{kibana_path}'. You may want to update 'kibana_path' in your config." unless valid_kibana_path?(kibana_path)
-      puts "A valid Kibana install found in #{kibana_path}"
+      if valid_kibana_path?(kibana_path)
+        puts "A valid Kibana install has been found in #{kibana_path}"
+      else
+        raise <<EOM
+No Kibana installation found in '#{kibana_path}'.
+  You may want to update 'kibana_path' in your config to be able to use the 'deploy' target.
+
+  If Kibana is not on the machine this gem is installed you may have to manually copy files located in:
+    - #{ibl_gem_path}/config/kibana_reports
+  into your Kibana dashboards path:
+    - <place where your Kibana is installed>/app/dashboards
+
+EOM
+      end
     end
 
-    desc 'Deploys box specific reports into Kibana directory'
+    desc 'Deploys box specific reports into Kibana dashboards directory'
     task :deploy => :info do
-
-    end
-
-    desc 'Installs Kibana in the vendor directory'
-    task :install
-
-    desc 'Create link to the actual place you installed Kibana'
-    task :link_to, :kibana_path do |t, args|
-      kibana_path = args.kibana_path.nil? ? ARGV.pop : args.kibana_path
-      raise 'Please provide a valid Kibana installation path' if kibana_path == t.name
-      raise "No Kibana installation found in '#{kibana_path}'" unless valid_kibana_path?(kibana_path)
-      puts "Installing Kibana from path '#{kibana_path}'"
-      suppress_symlink_only kibana_symlink_path
-      puts "Creating new link to Kibana installation '#{kibana_path}'"
-      File.symlink kibana_path, kibana_symlink_path
-      puts 'Done'
-    end
-
-
-    desc 'Loads default JSON reports into ElasticSearch for Kibana display'
-    task :load_reports do
-      store_es_kibana_dashboard 'Test1', '/home/laurent/devel/ruby/rails/engines/internet_box_logger/config/kibana_reports/FreboxV5.json'
+      kibana_reports_source.each do |report_file|
+        puts " - Installing '#{report_file}' to '#{kibana_dashboards_path}'"
+        options = {}
+        FileUtils.cp report_file, kibana_dashboards_path, options
+      end
     end
 
   end

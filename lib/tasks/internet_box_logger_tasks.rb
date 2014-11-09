@@ -98,6 +98,15 @@ module InternetBoxLogger
 
     module Kibana
 
+      def kibana_reports_source
+        reports_source = "#{ibl_gem_path}/config/kibana_reports"
+        Dir.entries(reports_source).keep_if {|e| e =~ /_report\.json$/i }.map {|e| "#{reports_source}/#{e}"}
+      end
+
+      def kibana_dashboards_path
+        "#{kibana_path}/app/dashboards"
+      end
+
       def kibana_path
         EasyAppHelper.config[:kibana_path]
       end
@@ -109,30 +118,6 @@ module InternetBoxLogger
 
       def valid_kibana_path? path
         File.exists? "#{path}/index.html"
-      end
-
-
-      def store_es_kibana_dashboard(dashboard_name, kibana_export_file)
-        content = JSON.parse File.read(kibana_export_file)
-        dashboard_url = "http://#{EasyAppHelper.config.elastic_servers[0]}/kibana-int/dashboard/#{ERB::Util.url_encode dashboard_name}"
-
-        # es_response = JSON.parse HTTPClient.new.get(dashboard_url).body
-        # found = es_response[:found.to_s]
-
-        dashboard_document = {
-            _id: dashboard_name,
-            _index: 'kibana-int',
-            _source: {
-                dashboard: content.to_json,
-                group: 'guest',
-                title: dashboard_name,
-                user: 'guest'
-            },
-            _type: 'dashboard'
-        }
-        HTTPClient.new.put dashboard_url, dashboard_document.to_json
-
-        puts dashboard_document.to_json
       end
 
 
