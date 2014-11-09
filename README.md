@@ -81,10 +81,9 @@ ElasticSearch on the same machine as the gem is installed, then it should alread
 
 **These values are the default and you don't need to create a new config file if they already fit your needs.**
 
+### Deploying Kibana reports
 
-
-
-### Deploy
+### Using the gem in your own projects
 
 
 ## Contributing
