@@ -36,7 +36,7 @@ module InternetBoxLogger
 
 
     def elasticsearch_client
-      @elasticsearch_client ||= Elasticsearch::Client.new hosts: Server[], log: true, reload_connections: true
+      @elasticsearch_client ||= Elasticsearch::Client.new hosts: Server[], log: EasyAppHelper.config[:debug], reload_connections: true
     end
 
     def save
@@ -46,6 +46,7 @@ module InternetBoxLogger
       end
       EasyAppHelper.logger.debug 'Saving to ElasticSearch'
       @internal_es_representation = internal_representation
+      EasyAppHelper.puts_and_logs 'Your box metrics have been indexed into Elastic Search'
       self
     rescue
       EasyAppHelper.logger.error 'Unable to save to ElasticSearch !!'
