@@ -16,9 +16,11 @@ Currently supported box:
 
 ### Dependencies
 
-You need to have [ELK] installed, the fantastic software trilogy, that brings you the power of analytics at your fingertips.
+You need to have [ELK] installed, the fantastic software trilogy that brings you the power of analytics at your fingertips.
 In our case we just need ElasticSearch and Kibana, LogStash is not needed, but you should not prevent yourself from
 using it for log files of your own...
+
+Follow [ELK] installation procedure before installing this Gem.
 
 ### Gem installation
 Add this line to your application's Gemfile:
@@ -35,7 +37,8 @@ Or install it yourself as:
 
 ## Usage
 
-This brings basically an executable '```internet_box_logger```' that will save the state of your box into ElasticSearch.
+This Gem brings basically an executable '```internet_box_logger```' that will save the state of your box into an
+ElasticSearch instance.
 
 For this, it requires some configuration.
 
@@ -73,7 +76,9 @@ ElasticSearch on the same machine as the gem is installed, then it should alread
 ```elastic_binary``` This one is only used by a rake task (to stop/start and get info) about the ElasticSearch cluster.
 This is not really needed for the script to work.
 
-These values are the default and you don't need to create a new config file if they already fit your needs.
+**These values are the default and you don't need to create a new config file if they already fit your needs.**
+
+
 
 
 ### Deploy
