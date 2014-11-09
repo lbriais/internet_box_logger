@@ -46,7 +46,7 @@ Configuration thanks to [EasyAppHelper][EAP] enables multiple places to store yo
 * '```/etc/internet_box_logger.conf```' for a system-wide installation
 * '```~/.config/internet_box_logger.conf```' for a user-specific installation
 
-The default configuration is the following:
+The default configuration is the following in YAML format:
 
 ```yaml
 box_type: InternetBoxLogger::Parsers::FreeboxV5Parser
@@ -61,7 +61,20 @@ default_elastic_search:
   elastic_binary: /opt/elasticsearch/bin/elasticsearch
 ```
 
-box_type specifies the
+```box_type``` specifies the module in charge of gathering data from your box. it Should not be changed but you can define
+your own. **It is the way for you to add other types of boxes** if needed. If you do so, please do a pull-request
+afterwards.
+
+```cron_interval``` defines the time in minutes between two measurements.
+
+```elastic_servers``` You can specify here, how to reach your ElasticSearch cluster. If you did the default install of
+ElasticSearch on the same machine as the gem is installed, then it should already be the correct host:port.
+
+```elastic_binary``` This one is only used by a rake task (to stop/start and get info) about the ElasticSearch cluster.
+This is not really needed for the script to work.
+
+These values are already by default and you don't to create a new config file if they fit your needs.
+
 
 ### Deploy
 
