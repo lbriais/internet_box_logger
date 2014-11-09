@@ -70,11 +70,14 @@ afterwards.
 
 ```cron_interval``` defines the time in minutes between two measurements.
 
+```kibana_path``` defines where your [Kibana][ELK] is installed. This one is only used by a rake task to setup default
+dashboards for your box. This is not really needed for the script to work.
+
 ```elastic_servers``` You can specify here, how to reach your ElasticSearch cluster. If you did the default install of
 ElasticSearch on the same machine as the gem is installed, then it should already be the correct host:port.
 
-```elastic_binary``` This one is only used by a rake task (to stop/start and get info) about the ElasticSearch cluster.
-This is not really needed for the script to work.
+```elastic_binary``` defines where your [ElasticSearch][ELK] is installed. This one is only used by a rake task
+(to stop/start and get info) about the ElasticSearch cluster. This is not really needed for the script to work.
 
 **These values are the default and you don't need to create a new config file if they already fit your needs.**
 
