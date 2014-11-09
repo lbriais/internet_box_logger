@@ -83,8 +83,9 @@ ElasticSearch on the same machine as the gem is installed, then it should alread
 
 ### Deploying Kibana reports
 
-### Using the gem in your own projects
+### Setting up the cron task
 
+### Using the gem in your own projects
 
 ## Contributing
 
