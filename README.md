@@ -73,7 +73,7 @@ ElasticSearch on the same machine as the gem is installed, then it should alread
 ```elastic_binary``` This one is only used by a rake task (to stop/start and get info) about the ElasticSearch cluster.
 This is not really needed for the script to work.
 
-These values are already by default and you don't to create a new config file if they fit your needs.
+These values are the default and you don't need to create a new config file if they already fit your needs.
 
 
 ### Deploy
