@@ -5,12 +5,12 @@
 
 ## Overview
 
-The goal of this gem is to provide an easy way to monitor your internet box status.
+The goal of this [gem][IBL] is to provide an easy way to monitor your internet box status.
 It primarily targets the box I am using (the Freebox V5 from the '[Free]' french ISP).
 
 Currently supported box:
 
-* Freebox V5
+* **Freebox V5**
 
 ## Installation
 
