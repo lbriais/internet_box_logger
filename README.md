@@ -35,13 +35,6 @@ Or install it yourself as:
 
     $ gem install internet_box_logger
 
-## Usage
-
-This Gem brings basically an executable '```internet_box_logger```' that will save the state of your box into an
-ElasticSearch instance.
-
-For this, it requires some configuration.
-
 ### Configuration
 
 Configuration thanks to [EasyAppHelper][EAP] enables multiple places to store your configuration. But most useful one should be:
@@ -85,9 +78,42 @@ ElasticSearch on the same machine as the gem is installed, then it should alread
 
 **These values are the default and you don't need to create a new config file if they already fit your needs.**
 
+## Usage
+
+This Gem brings basically an executable '```internet_box_logger```' that will save the state of your box into an
+ElasticSearch instance.
+
+On top of this the gem brings a set of rake tasks in case you embed this gem in your own project.
+
+The script supports the following options that you can see with the ```--help``` options:
+
+```
+-- Generic options -------------------------------------------------------------
+        --auto                 Auto mode. Bypasses questions to user.
+        --simulate             Do not perform the actual underlying actions.
+    -v, --verbose              Enable verbose mode.
+    -h, --help                 Displays this help.
+-- Configuration options -------------------------------------------------------
+        --config-file          Specify a config file.
+        --config-override      If specified override all other config.
+-- Debug and logging options ---------------------------------------------------
+        --debug                Run in debug mode.
+        --debug-on-err         Run in debug mode with output to stderr.
+        --log-level            Log level from 0 to 5, default 2.
+        --log-file             File to log to.
+-- Script specific -------------------------------------------------------------
+        --serve                Runs a simple web server to serve Kibana UI
+        --server_port          Specify server port if you use the "--serve" option
+        --setup_cron           Setup the Cron task
+        --cron_interval        Specify the interval at which the measurements will be done
+        --remove_cron          Remove the Cron task
+```
+
 ### Deploying Kibana reports
 
 ### Setting up the cron task
+
+### Serving the Kibana UI
 
 ### Using the gem in your own projects
 
