@@ -28,6 +28,14 @@ module InternetBoxLogger
           msg =  'Incompatible options cron_setup and cron_remove'
           raise msg
         end
+        if config[:deploy_reports]
+          self.extend InternetBoxLogger::Tasks
+          self.extend InternetBoxLogger::Tasks::Kibana
+          kibana_info
+          deploy_reports
+          exit 0
+        end
+
         if config[:cron_setup]
           self.extend InternetBoxLogger::Tasks
           self.extend InternetBoxLogger::Tasks::Cron
@@ -59,11 +67,12 @@ module InternetBoxLogger
 
     def add_cmd_line_options
       config.add_command_line_section do |slop|
-        slop.on :serve, 'Runs a simple web server to serve Kibana UI', argument: false
-        slop.on :server_port, 'Specify server port if you use the "--serve" option', argument: true, as: Integer
-        slop.on :cron_setup, 'Setup the Cron task', argument: false
         slop.on :cron_interval, 'Specify the interval at which the measurements will be done', argument: true, as: Integer
         slop.on :cron_remove, 'Remove the Cron task', argument: false
+        slop.on :cron_setup, 'Setup the Cron task', argument: false
+        slop.on :deploy_reports, 'Deploy boxes dashboards to Kibana default folder', argument: false
+        slop.on :serve, 'Runs a simple web server to serve Kibana UI', argument: false
+        slop.on :server_port, 'Specify server port if you use the "--serve" option', argument: true, as: Integer
       end
     end
 

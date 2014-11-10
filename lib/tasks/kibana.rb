@@ -19,9 +19,22 @@ module InternetBoxLogger
         "#{EasyAppHelper.config.root}/public/kibana"
       end
 
-
       def valid_kibana_path? path
         File.exists? "#{path}/index.html"
+      end
+
+      def deploy_reports
+        kibana_reports_source.each do |report_file|
+          EasyAppHelper.puts_and_logs " - Installing '#{report_file}' to '#{kibana_dashboards_path}'"
+          options = {}
+          FileUtils.cp report_file, kibana_dashboards_path, options
+        end
+      end
+
+      def serve_ui(port=EasyAppHelper.config[:server_port])
+        require 'webrick'
+        port ||= EasyAppHelper.config[:server_port]
+        WEBrick::HTTPServer.new(:Port => port, :DocumentRoot => kibana_path).start
       end
 
       def kibana_info
@@ -40,22 +53,6 @@ No Kibana installation found in '#{kibana_path}'.
 EOM
         end
       end
-
-
-      def deploy_reports
-        kibana_reports_source.each do |report_file|
-          EasyAppHelper.puts_and_logs " - Installing '#{report_file}' to '#{kibana_dashboards_path}'"
-          options = {}
-          FileUtils.cp report_file, kibana_dashboards_path, options
-        end
-      end
-
-      def serve_ui(port=EasyAppHelper.config[:server_port])
-        require 'webrick'
-        port ||= EasyAppHelper.config[:server_port]
-        WEBrick::HTTPServer.new(:Port => port, :DocumentRoot => kibana_path).start
-      end
-
 
     end
   end
