@@ -214,9 +214,30 @@ Then provided you started the embedded server you just need to navigate to:
 Basically, to contribute you may want to:
 
 * create the module to gather information from your box.
-* build the Kibana report to display information.
 * Update the tests accordingly
+* build the Kibana report to display information.
 
+### Code
+
+The contract is pretty simple. Create a module to gather your box's data into the InternetBoxLogger::Parsers namespace
+(module). This module should implement two methods:
+
+* `get_box_data` that returns a hash of key-value pairs representing the data you  monitor from your box. The way you
+ get these is not important. In the case of the Freebox V5 the sole possibility is to parse a page returned by the
+ box itself and than contains a lot of metrics. But maybe your box provides a more sophisticated API, REST or
+ whatever.
+* `as_es_documents` should return an array of documents in the ElasticSearch way of thinking. This should the
+ transformation of the data returned by `get_box_data`, organised as an array of documents. This way you can organize
+ your data in a way that will allow you to query this data from Kibana to build your dashboards.
+
+### Tests
+
+You should upgrade the test set to cover what you added.
+
+### Dashboard
+
+You should add a new report into `config/kibana_reports`. The filename should end by "`_report.json`" to be taken in
+account by the script and rake tasks.
 
 That's all folks.
 
