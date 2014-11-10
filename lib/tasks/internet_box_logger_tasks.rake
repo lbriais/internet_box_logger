@@ -78,6 +78,14 @@ EOM
       end
     end
 
+
+    desc 'Launch a simple server to serve Kibana UI'
+    task :serve => :info do
+      require 'webrick'
+      WEBrick::HTTPServer.new(:Port => EasyAppHelper.config[:server_port], :DocumentRoot => kibana_path).start
+    end
+
+
   end
 
   # Cron tasks
@@ -105,7 +113,5 @@ EOM
       puts "config.cron_interval = #{EasyAppHelper.config[:cron_interval]}"
     end
   end
-
-
 
 end

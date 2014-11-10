@@ -10,7 +10,7 @@ It primarily targets the box I am using (the Freebox V5 from the '[Free]' french
 
 Currently supported box:
 
-* Freebox V5 ([Free])
+* Freebox V5
 
 ## Installation
 
@@ -58,6 +58,8 @@ cron_interval: 1
 
 kibana_path: /opt/kibana
 
+server_port: 5000
+
 default_elastic_search:
   elastic_servers:
     - 127.0.0.1:9200
@@ -72,6 +74,8 @@ afterwards.
 
 ```kibana_path``` defines where your [Kibana][ELK] is installed. This one is only used by a rake task to setup default
 dashboards for your box. This is not really needed for the script to work.
+
+```server_port``` defines the port to run a simple HTTP server to serve the Kibana UI.
 
 ```elastic_servers``` You can specify here, how to reach your ElasticSearch cluster. If you did the default install of
 ElasticSearch on the same machine as the gem is installed, then it should already be the correct host:port.
