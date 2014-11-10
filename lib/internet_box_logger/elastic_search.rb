@@ -42,7 +42,7 @@ module InternetBoxLogger
     def save
       internal_representation = []
       EasyAppHelper.logger.debug 'Saving measurements to ElasticSearch'
-      self.as_es_documents.reverse.each do |document|
+      self.as_es_documents.each do |document|
         begin
           EasyAppHelper.logger.debug " - #{document[:body][:name]}"
           internal_representation << elasticsearch_client.index(**document)
