@@ -95,8 +95,6 @@ elastic_binary: <the_path_to_the_elasticsearch_binary>
 This Gem brings basically an executable '```internet_box_logger```' that will save the state of your box into an
 ElasticSearch instance.
 
-On top of this the gem brings a set of rake tasks in case you embed this gem in your own project.
-
 The script supports the following options that you can see with the ```--help``` options:
 
 ```
@@ -124,12 +122,7 @@ The script supports the following options that you can see with the ```--help```
         --server_port          Specify server port if you use the "--serve" option
 ```
 
-### Script and rake mode
-
-This [gem][IBL] provides two way to interact:
-
-* The ```internet_box_logger``` script provided with the gem
-* The rake tasks provided with the gem when you use it in your own projects
+On top of this the gem brings a set of rake tasks **in case you bundle this gem in your own project**.
 
 The rake tasks provided are:
 
@@ -144,8 +137,15 @@ rake internet_box_logger:kibana:deploy       # Deploys box specific reports into
 rake internet_box_logger:kibana:info         # Displays Kibana information
 rake internet_box_logger:kibana:serve[port]  # Launch a simple server to serve Kibana UI
 ```
-The following commands have the same effect:
 
+### Script vs rake mode
+
+As stated, the [gem][IBL] supports two way to interact:
+
+* The ```internet_box_logger``` script provided with the gem
+* The rake tasks provided with the gem when you use it in your own projects
+
+Most commands are actually same, and the following commands have the same effect:
 
 <table>
     <tr>
@@ -202,10 +202,17 @@ You have to have:
 
 Then provided you started the embedded server you just need to navigate to:
 
-   http://localhost:5000/
+   http://localhost:5000/#/dashboard/file/FreeboxV5_report.json
 
+   This url is for the Freebox V5 which is the currently only one supported.
 
 ## Contributing
+
+Basically, to contribute you may want to:
+
+* create the module to gather information from your box.
+* build the Kibana report to display information.
+
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
