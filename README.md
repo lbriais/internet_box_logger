@@ -193,8 +193,8 @@ You have to have:
  this gem in your project) to deploy the reports to Kibana. Alternatively, you can manually copy the JSON files stored
  in the config/kibana_reports directory to where your Kibana is install in the  app/dashboards sub-directory.
  * An http server to serve the Kibana UI. You can use the mini embedded server and you can use the command line or the
- rake task (if you use this gem in your project) to start/stop it. Alternatively you can serve it with a server of your
- own.
+ rake task (if you use this gem in your project) to start/stop it (a correctly defined `kibana_path` in your config is
+ required). Alternatively you can serve it with a server of your own.
  * Setup the CRON task that will schedule the log into elastic search. You can use the command line or the rake task
  (if you use this gem in your project) to setup/remove the CRON task and you can verify it with `crontab -l`.
  Alternatively, you can create the cron entry fully manually or call the `internet_box_logger` from your own
@@ -208,17 +208,17 @@ Then provided you started the embedded server you just need to navigate to:
 
 ## Contributing
 
-Basically, to contribute you may want to:
-
-* create the module to gather information from your box.
-* build the Kibana report to display information.
-
-
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+Basically, to contribute you may want to:
+
+* create the module to gather information from your box.
+* build the Kibana report to display information.
+* Update the tests accordingly
 
 
 That's all folks.
