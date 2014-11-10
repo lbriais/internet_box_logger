@@ -74,12 +74,21 @@ dashboards for your box. This is not really needed for the script to work.
 ElasticSearch on the same machine as the gem is installed, then it should already be the correct host:port.
 
 `elastic_binary` defines where your [ElasticSearch][ELK] is installed. This one is only used by a rake task
-\(to stop/start and get info\) about the ElasticSearch cluster. This is not really needed for the script to work.
+(to stop/start and get info) about the ElasticSearch cluster. This is not really needed for the log process to work.
+When you change it in your config, you do not need to set it in the `default_elastic_search` hash, but instead you can
+directly set it at the root.
 
 **These values are the default and you don't need to create a new config file if they already fit your needs.**
 And it should be the case if you installed [ELK] as a whole on the machine you are using this gem.
 
 You can deploy every component separately and in this case you nay have to tweak the configuration.
+
+Most probably if you installed [ELK] locally, your config file may look like:
+
+```yaml
+kibana_path: <the_place_where_I_installed_Kibana>
+elastic_binary: <the_path_to_the_elasticsearch_binary>
+```
 
 ## Usage
 
@@ -109,6 +118,8 @@ The script supports the following options that you can see with the ```--help```
         --cron_remove          Remove the Cron task
         --cron_setup           Setup the Cron task
         --deploy_reports       Deploy boxes dashboards to Kibana default folder
+        --es_start             Starts the ElasticSearch server if installed locally and properly configured
+        --es_stop              Stops the ElasticSearch server if installed locally and properly configured
         --serve                Runs a simple web server to serve Kibana UI
         --server_port          Specify server port if you use the "--serve" option
 ```
@@ -146,6 +157,14 @@ The following commands have the same effect:
         <td>internet_box_logger -v --cron-remove</td>
     </tr>
     <tr>
+        <td>rake internet_box_logger:es:start </td>
+        <td>internet_box_logger -v --es-start </td>
+    </tr>
+    <tr>
+        <td>rake internet_box_logger:es:stop </td>
+        <td>internet_box_logger -v --es-stop </td>
+    </tr>
+    <tr>
         <td>rake internet_box_logger:kibana:deploy</td>
         <td>internet_box_logger -v --deploy-reports</td>
     </tr>
@@ -161,25 +180,30 @@ The following commands have the same effect:
 
 (\*) Warning, if you are using zsh, you may probably have to escape the brackets with backslashes.
 
-### Deploying Kibana reports
 
-#### Using rake task
+### Starting to monitor your box
 
-#### Using the internet_box_logger script
+You have to have:
 
-### Setting up and removing the cron task
+ * A running instance of ElasticSearch. If it is installed locally and the path to your ElasticSearch binary
+ is correctly set in your config file, you can use the command line or the rake task (if you use this gem in your
+ project) to start/stop it.
+ * A place where kibana is installed
+ * Setup correctly the `kibana_path` in your config and run either the the command line or the rake task (if you use
+ this gem in your project) to deploy the reports to Kibana. Alternatively, you can manually copy the JSON files stored
+ in the config/kibana_reports directory to where your Kibana is install in the  app/dashboards sub-directory.
+ * An http server to serve the Kibana UI. You can use the mini embedded server and you can use the command line or the
+ rake task (if you use this gem in your project) to start/stop it. Alternatively you can serve it with a server of your
+ own.
+ * Setup the CRON task that will schedule the log into elastic search. You can use the command line or the rake task
+ (if you use this gem in your project) to setup/remove the CRON task and you can verify it with `crontab -l`.
+ Alternatively, you can create the cron entry fully manually or call the `internet_box_logger` from your own
+ scheduler.
 
-#### Using rake task
+Then provided you started the embedded server you just need to navigate to:
 
-#### Using the internet_box_logger script
+   http://localhost:5000/
 
-### Serving the Kibana UI
-
-#### Using rake task
-
-#### Using the internet_box_logger script
-
-### Using the gem in your own projects
 
 ## Contributing
 

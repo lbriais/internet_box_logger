@@ -48,6 +48,20 @@ module InternetBoxLogger
           cron_remove
           exit 0
         end
+        if config[:es_start]
+          self.extend InternetBoxLogger::Tasks
+          self.extend InternetBoxLogger::Tasks::ElasticSearch
+          start_es_server
+          exit 0
+        end
+        if config[:es_stop]
+          self.extend InternetBoxLogger::Tasks
+          self.extend InternetBoxLogger::Tasks::ElasticSearch
+          stop_es_server
+          exit 0
+        end
+
+
         if config[:serve]
           self.extend InternetBoxLogger::Tasks
           self.extend InternetBoxLogger::Tasks::Kibana
@@ -71,6 +85,8 @@ module InternetBoxLogger
         slop.on :cron_remove, 'Remove the Cron task', argument: false
         slop.on :cron_setup, 'Setup the Cron task', argument: false
         slop.on :deploy_reports, 'Deploy boxes dashboards to Kibana default folder', argument: false
+        slop.on :es_start, 'Starts the ElasticSearch server if installed locally and properly configured', argument: false
+        slop.on :es_stop, 'Stops the ElasticSearch server if installed locally and properly configured', argument: false
         slop.on :serve, 'Runs a simple web server to serve Kibana UI', argument: false
         slop.on :server_port, 'Specify server port if you use the "--serve" option', argument: true, as: Integer
       end
