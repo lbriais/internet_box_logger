@@ -157,11 +157,11 @@ Most commands are actually same, and the following commands have the same effect
         <td>internet_box_logger -v --cron-remove</td>
     </tr>
     <tr>
-        <td>rake internet_box_logger:es:start </td>
+        <td>rake internet_box_logger:es\:start </td>
         <td>internet_box_logger -v --es-start </td>
     </tr>
     <tr>
-        <td>rake internet_box_logger:es:stop </td>
+        <td>rake internet_box_logger:es\:stop </td>
         <td>internet_box_logger -v --es-stop </td>
     </tr>
     <tr>
