@@ -39,8 +39,8 @@ Or install it yourself as:
 
 Configuration thanks to [EasyAppHelper][EAP] enables multiple places to store your configuration. But most useful one should be:
 
-* '```/etc/internet_box_logger.conf```' for a system-wide installation
-* '```~/.config/internet_box_logger.conf```' for a user-specific installation
+* '`/etc/internet_box_logger.conf`' for a system-wide installation
+* '`~/.config/internet_box_logger.conf`' for a user-specific installation
 
 The default configuration is the following in YAML format:
 
@@ -59,24 +59,27 @@ default_elastic_search:
   elastic_binary: /opt/elasticsearch/bin/elasticsearch
 ```
 
-```box_type``` specifies the module in charge of gathering data from your box. it Should not be changed but you can define
+`box_type` specifies the module in charge of gathering data from your box. it Should not be changed but you can define
 your own. **It is the way for you to add other types of boxes** if needed. If you do so, please do a pull-request
 afterwards.
 
-```cron_interval``` defines the time in minutes between two measurements.
+`cron_interval` defines the time in minutes between two measurements.
 
-```kibana_path``` defines where your [Kibana][ELK] is installed. This one is only used by a rake task to setup default
+`kibana_path` defines where your [Kibana][ELK] is installed. This one is only used by a rake task to setup default
 dashboards for your box. This is not really needed for the script to work.
 
-```server_port``` defines the port to run a simple HTTP server to serve the Kibana UI.
+`server_port` defines the port to run a simple HTTP server to serve the Kibana UI.
 
-```elastic_servers``` You can specify here, how to reach your ElasticSearch cluster. If you did the default install of
+`elastic_servers` You can specify here, how to reach your ElasticSearch cluster. If you did the default install of
 ElasticSearch on the same machine as the gem is installed, then it should already be the correct host:port.
 
-```elastic_binary``` defines where your [ElasticSearch][ELK] is installed. This one is only used by a rake task
-(to stop/start and get info) about the ElasticSearch cluster. This is not really needed for the script to work.
+`elastic_binary` defines where your [ElasticSearch][ELK] is installed. This one is only used by a rake task
+\(to stop/start and get info\) about the ElasticSearch cluster. This is not really needed for the script to work.
 
 **These values are the default and you don't need to create a new config file if they already fit your needs.**
+And it should be the case if you installed [ELK] as a whole on the machine you are using this gem.
+
+You can deploy every component separately and in this case you nay have to tweak the configuration.
 
 ## Usage
 
@@ -102,12 +105,61 @@ The script supports the following options that you can see with the ```--help```
         --log-level            Log level from 0 to 5, default 2.
         --log-file             File to log to.
 -- Script specific -------------------------------------------------------------
-        --serve                Runs a simple web server to serve Kibana UI
-        --server_port          Specify server port if you use the "--serve" option
-        --cron_setup           Setup the Cron task
         --cron_interval        Specify the interval at which the measurements will be done
         --cron_remove          Remove the Cron task
+        --cron_setup           Setup the Cron task
+        --deploy_reports       Deploy boxes dashboards to Kibana default folder
+        --serve                Runs a simple web server to serve Kibana UI
+        --server_port          Specify server port if you use the "--serve" option
 ```
+
+### Script and rake mode
+
+This [gem][IBL] provides two way to interact:
+
+* The ```internet_box_logger``` script provided with the gem
+* The rake tasks provided with the gem when you use it in your own projects
+
+The rake tasks provided are:
+
+```
+rake internet_box_logger:cron:info           # Show your Cron config
+rake internet_box_logger:cron:remove         # Removes cron task
+rake internet_box_logger:cron:setup          # Setup cron to gather information every x minutes (configurable)
+rake internet_box_logger:es:info             # Show your local ElasticSearch config
+rake internet_box_logger:es:start            # Starts your local ElasticSearch server
+rake internet_box_logger:es:stop             # Stops your local ElasticSearch server
+rake internet_box_logger:kibana:deploy       # Deploys box specific reports into Kibana dashboards directory
+rake internet_box_logger:kibana:info         # Displays Kibana information
+rake internet_box_logger:kibana:serve[port]  # Launch a simple server to serve Kibana UI
+```
+The following commands have the same effect:
+
+
+<table>
+    <tr>
+        <td>rake internet_box_logger:cron:setup </td>
+        <td>internet_box_logger -v --cron-setup </td>
+    </tr>
+    <tr>
+        <td>rake internet_box_logger:cron:remove</td>
+        <td>internet_box_logger -v --cron-remove</td>
+    </tr>
+    <tr>
+        <td>rake internet_box_logger:kibana:deploy</td>
+        <td>internet_box_logger -v --deploy-reports</td>
+    </tr>
+    <tr>
+        <td>rake internet_box_logger:kibana:serve</td>
+        <td>internet_box_logger -v --serve</td>
+    </tr>
+    <tr>
+        <td>rake internet_box_logger:kibana:serve[1234] (*)</td>
+        <td>internet_box_logger -v --serve --server-port 1234</td>
+    </tr>
+</table>
+
+(\*) Warning, if you are using zsh, you may probably have to escape the brackets with backslashes.
 
 ### Deploying Kibana reports
 
