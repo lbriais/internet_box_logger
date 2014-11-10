@@ -79,10 +79,11 @@ EOM
     end
 
 
-    desc 'Launch a simple server to serve Kibana UI'
-    task :serve => :info do
+    desc 'Launch a simple server to serve Kibana UI. You can specify the port as parameter'
+    task :serve, [:port]  => :info do |tsk, args|
       require 'webrick'
-      WEBrick::HTTPServer.new(:Port => EasyAppHelper.config[:server_port], :DocumentRoot => kibana_path).start
+      port = args[:port].nil? ? EasyAppHelper.config[:server_port] : args[:port]
+      WEBrick::HTTPServer.new(:Port => port, :DocumentRoot => kibana_path).start
     end
 
 

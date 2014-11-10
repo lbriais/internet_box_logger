@@ -1,13 +1,14 @@
 #!/usr/bin/env ruby
 
 require 'internet_box_logger'
+require 'tasks/internet_box_logger_tasks'
 
 module InternetBoxLogger
   class Script
     include EasyAppHelper
 
     APP_NAME = 'The Internet Box Logger'
-    DESCRIPTION = 'This application will log your Internet box activity into ElasticSearch.'
+    DESCRIPTION = 'This application will log your Internet box metrics into ElasticSearch.'
 
     def initialize
       # Providing this data is optional but brings better logging and online help
@@ -15,12 +16,52 @@ module InternetBoxLogger
     end
 
     def run
+      add_cmd_line_options
       if config[:help]
         puts config.help
         exit 0
       end
-      puts_and_logs 'Application is starting'
-      log_box_information
+      if config[:setup_cron] && config[:remove_cron]
+        msg =  'Incompatible options setup_cron and remove_cron'
+        logger.fatal msg
+        raise msg
+      end
+      if config[:setup_cron]
+        self.extend InternetBoxLogger::Tasks
+        self.extend InternetBoxLogger::Tasks::Cron
+        puts_and_logs "Using Whenever config file: '#{whenever_conf_file}' with interval #{config[:cron_interval]}"
+        system "whenever -f '#{whenever_conf_file}' -i '#{whenever_conf_file}' -s interval='#{config[:cron_interval]}'"
+        puts_and_logs 'Crontab updated'
+        exit 0
+      end
+      if config[:remove_cron]
+        self.extend InternetBoxLogger::Tasks
+        self.extend InternetBoxLogger::Tasks::Cron
+        puts_and_logs "Using Whenever config file: '#{whenever_conf_file}'"
+        system "whenever -c '#{whenever_conf_file}'"
+        puts_and_logs 'Crontab updated'
+        exit 0
+      end
+      if config[:serve]
+        require 'webrick'
+        self.extend InternetBoxLogger::Tasks::Kibana
+        puts_and_logs "Serving Kibana UI on port #{config[:server_port]}"
+        WEBrick::HTTPServer.new(:Port => config[:server_port], :DocumentRoot => kibana_path).start
+      else
+        puts_and_logs 'Application is starting'
+        log_box_information
+      end
+
+    end
+
+    def add_cmd_line_options
+      config.add_command_line_section do |slop|
+        slop.on :serve, 'Runs a simple web server to serve Kibana UI', argument: false
+        slop.on :server_port, 'Specify server port if you use the "--serve" option', argument: true, as: Integer
+        slop.on :setup_cron, 'Setup the Cron task', argument: false
+        slop.on :cron_interval, 'Specify the interval at which the measurements will be done', argument: true, as: Integer
+        slop.on :remove_cron, 'Remove the Cron task', argument: false
+      end
     end
 
     def log_box_information
