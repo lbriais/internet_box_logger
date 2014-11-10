@@ -59,21 +59,16 @@ default_elastic_search:
   elastic_binary: /opt/elasticsearch/bin/elasticsearch
 ```
 
-`box_type` specifies the module in charge of gathering data from your box. it Should not be changed but you can define
+* `box_type` specifies the module in charge of gathering data from your box. it Should not be changed but you can define
 your own. **It is the way for you to add other types of boxes** if needed. If you do so, please do a pull-request
 afterwards.
-
-`cron_interval` defines the time in minutes between two measurements.
-
-`kibana_path` defines where your [Kibana][ELK] is installed. This one is only used by a rake task to setup default
+* `cron_interval` defines the time in minutes between two measurements.
+* `kibana_path` defines where your [Kibana][ELK] is installed. This one is only used by a rake task to setup default
 dashboards for your box. This is not really needed for the script to work.
-
-`server_port` defines the port to run a simple HTTP server to serve the Kibana UI.
-
-`elastic_servers` You can specify here, how to reach your ElasticSearch cluster. If you did the default install of
+* `server_port` defines the port to run a simple HTTP server to serve the Kibana UI.
+* `elastic_servers` You can specify here, how to reach your ElasticSearch cluster. If you did the default install of
 ElasticSearch on the same machine as the gem is installed, then it should already be the correct host:port.
-
-`elastic_binary` defines where your [ElasticSearch][ELK] is installed. This one is only used by a rake task
+* `elastic_binary` defines where your [ElasticSearch][ELK] is installed. This one is only used by a rake task
 (to stop/start and get info) about the ElasticSearch cluster. This is not really needed for the log process to work.
 When you change it in your config, you do not need to set it in the `default_elastic_search` hash, but instead you can
 directly set it at the root.
