@@ -149,32 +149,32 @@ Most commands are actually same, and the following commands have the same effect
 
 <table>
     <tr>
-        <td>rake internet_box_logger:cron:setup </td>
-        <td>internet_box_logger -v --cron-setup </td>
+        <td><pre>rake internet_box_logger:cron:setup</pre></td>
+        <td><pre>internet_box_logger -v --cron-setup</pre></td>
     </tr>
     <tr>
-        <td>rake internet_box_logger:cron:remove</td>
-        <td>internet_box_logger -v --cron-remove</td>
+        <td><pre>rake internet_box_logger:cron:remove</pre></td>
+        <td><pre>internet_box_logger -v --cron-remove</pre></td>
     </tr>
     <tr>
-        <td>rake internet_box_logger:es\:start </td>
-        <td>internet_box_logger -v --es-start </td>
+        <td><pre>rake internet_box_logger:es:start</pre></td>
+        <td><pre>internet_box_logger -v --es-start</pre></td>
     </tr>
     <tr>
-        <td>rake internet_box_logger:es\:stop </td>
-        <td>internet_box_logger -v --es-stop </td>
+        <td><pre>rake internet_box_logger:es:stop</pre></td>
+        <td><pre>internet_box_logger -v --es-stop</pre></td>
     </tr>
     <tr>
-        <td>rake internet_box_logger:kibana:deploy</td>
-        <td>internet_box_logger -v --deploy-reports</td>
+        <td><pre>rake internet_box_logger:kibana:deploy</pre></td>
+        <td><pre>internet_box_logger -v --deploy-reports</pre></td>
     </tr>
     <tr>
-        <td>rake internet_box_logger:kibana:serve</td>
-        <td>internet_box_logger -v --serve</td>
+        <td><pre>rake internet_box_logger:kibana:serve</pre></td>
+        <td><pre>internet_box_logger -v --serve</pre></td>
     </tr>
     <tr>
-        <td>rake internet_box_logger:kibana:serve[1234] (*)</td>
-        <td>internet_box_logger -v --serve --server-port 1234</td>
+        <td><pre>rake internet_box_logger:kibana:serve[1234] (*)</pre></td>
+        <td><pre>internet_box_logger -v --serve --server-port 1234</pre></td>
     </tr>
 </table>
 
