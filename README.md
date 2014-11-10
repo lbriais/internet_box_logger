@@ -233,6 +233,9 @@ The contract is pretty simple. Create a module to gather your box's data into th
  transformation of the data returned by `get_box_data`, and organised as an array of documents. This way you can organize
  your data in a way that will allow you to query this data from Kibana to build your dashboards.
 
+Then you have to specify this new parser in the configuration file using the `box_type` property (see the default value
+ in the upper part of this help to see how to do it).
+
 ### Tests
 
 You should upgrade the test set to cover what you added.
