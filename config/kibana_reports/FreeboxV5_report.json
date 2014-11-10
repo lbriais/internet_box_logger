@@ -721,7 +721,7 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "_score",
+            "created_at",
             "desc"
           ],
           "overflow": "min-height",
@@ -737,8 +737,8 @@
           "field_list": true,
           "all_fields": false,
           "trimFactor": 300,
-          "localTime": false,
-          "timeField": "@timestamp",
+          "localTime": true,
+          "timeField": "created_at",
           "spyable": true,
           "queries": {
             "mode": "all",
