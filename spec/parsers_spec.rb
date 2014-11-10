@@ -36,6 +36,28 @@ describe InternetBoxLogger::Parsers do
         expect(subject.as_es_documents is_a? Array).to be_truthy
       end
 
+      it 'should have many up/down documents and one info' do
+        subject.get_box_data
+        docs = subject.as_es_documents
+        up, down, info, unknown = 0, 0, 0, 0
+        docs.each do |doc|
+          case doc[:type]
+            when 'up'
+              up += 1
+            when 'down'
+              down += 1
+            when :info
+              info += 1
+            else
+              unknown += 1
+          end
+        end
+        expect(up == down).to be_truthy
+        expect(info == 1).to be_truthy
+        expect(unknown == 0).to be_truthy
+      end
+
+
     end
   end
 

@@ -91,13 +91,18 @@ module InternetBoxLogger
         generic_info = {}
 
         attributes.each do |attr_name, content|
-          next if attr_name.length > 3 && self.up_down_reports.keys.include?(attr_name.to_s.gsub(/_(up|down)$/, '').to_sym)
+          # Tries to remove data that are up/down measurements already covered by previous collection
+          data_key = attr_name.to_s.gsub(/_(up|down)$/, '').to_sym
+          next if attr_name.length > 3 && self.up_down_reports.keys.include?(data_key)
+          # Else adds info to generic info
           generic_info[attr_name] = content
         end
         generic_info[:name] = 'generic'
-        res << {
+        generic_info[:created_at] = created_at
+
+            res << {
             index: "#{self.class.name.underscore.tr('/', '_')}_generic",
-            type: :info,
+            type: :info.to_s,
             body: generic_info
         }
 
