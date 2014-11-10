@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bundler/setup'
+
 require File.expand_path '../internet_box_logger_tasks.rb', __FILE__
 
 

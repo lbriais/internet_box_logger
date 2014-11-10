@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'rubygems'
+require 'bundler/setup'
 require 'internet_box_logger'
 require 'tasks/internet_box_logger_tasks'
 
@@ -21,36 +23,37 @@ module InternetBoxLogger
         puts config.help
         exit 0
       end
-      if config[:setup_cron] && config[:remove_cron]
-        msg =  'Incompatible options setup_cron and remove_cron'
-        logger.fatal msg
-        raise msg
+      begin
+        if config[:cron_setup] && config[:cron_remove]
+          msg =  'Incompatible options cron_setup and cron_remove'
+          raise msg
+        end
+        if config[:cron_setup]
+          self.extend InternetBoxLogger::Tasks
+          self.extend InternetBoxLogger::Tasks::Cron
+          cron_setup
+          exit 0
+        end
+        if config[:cron_remove]
+          self.extend InternetBoxLogger::Tasks
+          self.extend InternetBoxLogger::Tasks::Cron
+          cron_remove
+          exit 0
+        end
+        if config[:serve]
+          self.extend InternetBoxLogger::Tasks
+          self.extend InternetBoxLogger::Tasks::Kibana
+          kibana_info
+          serve_ui
+        else
+          puts_and_logs 'Application is starting'
+          log_box_information
+        end
+      rescue => e
+        puts "Program aborted with message: #{e.message}"
+        logger.fatal "#{e.message}\nBacktrace:\n#{e.backtrace.join("\n\t")}" if config[:debug]
       end
-      if config[:setup_cron]
-        self.extend InternetBoxLogger::Tasks
-        self.extend InternetBoxLogger::Tasks::Cron
-        puts_and_logs "Using Whenever config file: '#{whenever_conf_file}' with interval #{config[:cron_interval]}"
-        system "whenever -f '#{whenever_conf_file}' -i '#{whenever_conf_file}' -s interval='#{config[:cron_interval]}'"
-        puts_and_logs 'Crontab updated'
-        exit 0
-      end
-      if config[:remove_cron]
-        self.extend InternetBoxLogger::Tasks
-        self.extend InternetBoxLogger::Tasks::Cron
-        puts_and_logs "Using Whenever config file: '#{whenever_conf_file}'"
-        system "whenever -c '#{whenever_conf_file}'"
-        puts_and_logs 'Crontab updated'
-        exit 0
-      end
-      if config[:serve]
-        require 'webrick'
-        self.extend InternetBoxLogger::Tasks::Kibana
-        puts_and_logs "Serving Kibana UI on port #{config[:server_port]}"
-        WEBrick::HTTPServer.new(:Port => config[:server_port], :DocumentRoot => kibana_path).start
-      else
-        puts_and_logs 'Application is starting'
-        log_box_information
-      end
+
 
     end
 
@@ -58,9 +61,9 @@ module InternetBoxLogger
       config.add_command_line_section do |slop|
         slop.on :serve, 'Runs a simple web server to serve Kibana UI', argument: false
         slop.on :server_port, 'Specify server port if you use the "--serve" option', argument: true, as: Integer
-        slop.on :setup_cron, 'Setup the Cron task', argument: false
+        slop.on :cron_setup, 'Setup the Cron task', argument: false
         slop.on :cron_interval, 'Specify the interval at which the measurements will be done', argument: true, as: Integer
-        slop.on :remove_cron, 'Remove the Cron task', argument: false
+        slop.on :cron_remove, 'Remove the Cron task', argument: false
       end
     end
 
