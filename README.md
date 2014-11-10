@@ -6,6 +6,9 @@
 ## Overview
 
 The goal of this [gem][IBL] is to provide an easy way to monitor your internet box status.
+The idea is to gather as much data as you can about your box, and regularly store the metrics into an ElasticSearch
+server/cluster in order to provide a Kibana dashboard on top to visualize the metrics.
+
 It primarily targets the box I am using (the Freebox V5 from the '[Free]' french ISP).
 
 Currently supported box:
@@ -222,12 +225,12 @@ Basically, to contribute you may want to:
 The contract is pretty simple. Create a module to gather your box's data into the InternetBoxLogger::Parsers namespace
 (module). This module should implement two methods:
 
-* `get_box_data` that returns a hash of key-value pairs representing the data you  monitor from your box. The way you
+* `get_box_data` that returns a hash of key-value pairs representing the data you want to monitor from your box. The way you
  get these is not important. In the case of the Freebox V5 the sole possibility is to parse a page returned by the
  box itself and than contains a lot of metrics. But maybe your box provides a more sophisticated API, REST or
  whatever.
-* `as_es_documents` should return an array of documents in the ElasticSearch way of thinking. This should the
- transformation of the data returned by `get_box_data`, organised as an array of documents. This way you can organize
+* `as_es_documents` should return an array of documents (hashes) in the ElasticSearch way of thinking. This should be the
+ transformation of the data returned by `get_box_data`, and organised as an array of documents. This way you can organize
  your data in a way that will allow you to query this data from Kibana to build your dashboards.
 
 ### Tests
