@@ -37,7 +37,8 @@ Or install it yourself as:
 
 ### Configuration
 
-Configuration thanks to [EasyAppHelper][EAP] enables multiple places to store your configuration. But most useful one should be:
+Configuration, thanks to [EasyAppHelper][EAP], enables multiple places to store your configuration. But most useful
+ones should be:
 
 * '`/etc/internet_box_logger.conf`' for a system-wide installation
 * '`~/.config/internet_box_logger.conf`' for a user-specific installation
@@ -70,6 +71,7 @@ dashboards for your box. This is not really needed for the script to work.
 ElasticSearch on the same machine as the gem is installed, then it should already be the correct host:port.
 * `elastic_binary` defines where your [ElasticSearch][ELK] is installed. This one is only used by a rake task
 (to stop/start and get info) about the ElasticSearch cluster. This is not really needed for the log process to work.
+Only to enable stop/start of the server.
 When you change it in your config, you do not need to set it in the `default_elastic_search` hash, but instead you can
 directly set it at the root.
 
