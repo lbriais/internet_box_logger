@@ -1,7 +1,7 @@
 # [InternetBoxLogger][IBL]
 
- [![Build Status](https://travis-ci.org/lbriais/internet_box_logger.png?branch=master)](https://travis-ci.org/lbriais/internet_box_logger)
- [![Gem Version](https://badge.fury.io/rb/internet_box_logger.png)](http://badge.fury.io/rb/internet_box_logger)
+ [![Build Status](https://travis-ci.org/lbriais/internet_box_logger.svg)](https://travis-ci.org/lbriais/internet_box_logger)
+ [![Gem Version](https://badge.fury.io/rb/internet_box_logger.svg)](http://badge.fury.io/rb/internet_box_logger)
 
 ## Overview
 
