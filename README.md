@@ -104,16 +104,28 @@ The script supports the following options that you can see with the ```--help```
 -- Script specific -------------------------------------------------------------
         --serve                Runs a simple web server to serve Kibana UI
         --server_port          Specify server port if you use the "--serve" option
-        --setup_cron           Setup the Cron task
+        --cron_setup           Setup the Cron task
         --cron_interval        Specify the interval at which the measurements will be done
-        --remove_cron          Remove the Cron task
+        --cron_remove          Remove the Cron task
 ```
 
 ### Deploying Kibana reports
 
-### Setting up the cron task
+#### Using rake task
+
+#### Using the internet_box_logger script
+
+### Setting up and removing the cron task
+
+#### Using rake task
+
+#### Using the internet_box_logger script
 
 ### Serving the Kibana UI
+
+#### Using rake task
+
+#### Using the internet_box_logger script
 
 ### Using the gem in your own projects
 

@@ -325,7 +325,7 @@
           "y_format": "none",
           "grid": {
             "max": null,
-            "min": 6
+            "min": 0
           },
           "queries": {
             "mode": "selected",
