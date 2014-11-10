@@ -46,7 +46,7 @@ describe InternetBoxLogger::Parsers do
               up += 1
             when 'down'
               down += 1
-            when :info
+            when 'info'
               info += 1
             else
               unknown += 1

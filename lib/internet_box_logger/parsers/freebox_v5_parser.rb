@@ -121,6 +121,45 @@ module InternetBoxLogger
         self.send FIELD_POST_PROCESSING[field_name], field_name, match_data[field_name]
       end
 
+      def as_es_documents(created_at=Time.now)
+        res = []
+        self.up_down_reports.each_pair do |measurement, name|
+          %w(up down).each do |measurement_type|
+            data_name = "#{measurement}_#{measurement_type}"
+            es_object = {
+                index: "#{self.class.name.underscore.tr('/', '_')}_#{measurement}",
+                type: measurement_type
+            }
+            data = {
+                created_at: created_at,
+                name: data_name,
+                description: name,
+                value: attributes[data_name.to_sym]
+            }
+            es_object[:body] = data
+            res << es_object
+          end
+        end
+        generic_info = {}
+
+        attributes.each do |attr_name, content|
+          # Tries to remove data that are up/down measurements already covered by previous collection
+          data_key = attr_name.to_s.gsub(/_(up|down)$/, '').to_sym
+          next if attr_name.length > 3 && self.up_down_reports.keys.include?(data_key)
+          # Else adds info to generic info
+          generic_info[attr_name] = content
+        end
+        generic_info[:name] = 'generic'
+        generic_info[:created_at] = created_at
+
+        res << {
+            index: "#{self.class.name.underscore.tr('/', '_')}_generic",
+            type: :info.to_s,
+            body: generic_info
+        }
+
+        res
+      end
 
     end
   end
