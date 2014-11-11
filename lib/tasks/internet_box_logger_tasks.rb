@@ -10,7 +10,7 @@ module InternetBoxLogger
 
     def ibl_gem_path
       spec = Gem::Specification.find_by_name('internet_box_logger')
-      File.expand_path "../#{spec.name}", spec.spec_dir
+      spec.gem_dir
     end
 
   end
