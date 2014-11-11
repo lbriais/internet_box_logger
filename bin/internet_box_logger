@@ -8,13 +8,14 @@ require 'tasks/internet_box_logger_tasks'
 module InternetBoxLogger
   class Script
     include EasyAppHelper
-
+    include InternetBoxLogger::Tasks
     APP_NAME = 'The Internet Box Logger'
     DESCRIPTION = 'This application will log your Internet box metrics into ElasticSearch.'
 
     def initialize
       # Providing this data is optional but brings better logging and online help
       config.describes_application(app_name: APP_NAME, app_version: InternetBoxLogger::VERSION, app_description: DESCRIPTION)
+      config.script_filename = "#{ibl_gem_path}/config/internet_box_logger.conf"
     end
 
     def run
@@ -29,7 +30,6 @@ module InternetBoxLogger
           raise msg
         end
         if config[:deploy_reports]
-          self.extend InternetBoxLogger::Tasks
           self.extend InternetBoxLogger::Tasks::Kibana
           kibana_info
           deploy_reports
@@ -37,25 +37,21 @@ module InternetBoxLogger
         end
 
         if config[:cron_setup]
-          self.extend InternetBoxLogger::Tasks
           self.extend InternetBoxLogger::Tasks::Cron
           cron_setup
           exit 0
         end
         if config[:cron_remove]
-          self.extend InternetBoxLogger::Tasks
           self.extend InternetBoxLogger::Tasks::Cron
           cron_remove
           exit 0
         end
         if config[:es_start]
-          self.extend InternetBoxLogger::Tasks
           self.extend InternetBoxLogger::Tasks::ElasticSearch
           start_es_server
           exit 0
         end
         if config[:es_stop]
-          self.extend InternetBoxLogger::Tasks
           self.extend InternetBoxLogger::Tasks::ElasticSearch
           stop_es_server
           exit 0
@@ -63,7 +59,6 @@ module InternetBoxLogger
 
 
         if config[:serve]
-          self.extend InternetBoxLogger::Tasks
           self.extend InternetBoxLogger::Tasks::Kibana
           kibana_info
           serve_ui
