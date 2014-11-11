@@ -8,6 +8,7 @@ require 'tasks/internet_box_logger_tasks'
 module InternetBoxLogger
   class Script
     include EasyAppHelper
+    include InternetBoxLogger::Tasks
     APP_NAME = 'The Internet Box Logger'
     DESCRIPTION = 'This application will log your Internet box metrics into ElasticSearch.'
 
