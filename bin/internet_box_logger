@@ -8,14 +8,19 @@ require 'tasks/internet_box_logger_tasks'
 module InternetBoxLogger
   class Script
     include EasyAppHelper
-    include InternetBoxLogger::Tasks
     APP_NAME = 'The Internet Box Logger'
     DESCRIPTION = 'This application will log your Internet box metrics into ElasticSearch.'
 
     def initialize
       # Providing this data is optional but brings better logging and online help
       config.describes_application(app_name: APP_NAME, app_version: InternetBoxLogger::VERSION, app_description: DESCRIPTION)
-      config.script_filename = "#{ibl_gem_path}/config/internet_box_logger.conf"
+      # Ugly hack to fix issue with easy_app_helper way of managing gem config files
+      gem_conf_file = File.join EasyAppHelper::Core::Config::Places.gem_root_path(__FILE__), 'config', 'internet_box_logger.conf'
+      config.internal_configs[:gem] = {
+          content: Hash[YAML::load(File.open(gem_conf_file)).map { |k, v| [k.to_sym, v] }],
+          source: gem_conf_file,
+          origin: :internet_box_logger
+      }
     end
 
     def run
