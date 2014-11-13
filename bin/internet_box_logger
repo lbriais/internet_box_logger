@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require 'bundler/setup'
+# require 'rubygems'
+# require 'bundler/setup'
 require 'internet_box_logger'
 require 'tasks/internet_box_logger_tasks'
 

@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'activesupport'
   spec.add_dependency 'whenever'
-  spec.add_dependency 'easy_app_helper'
+  spec.add_dependency 'easy_app_helper', '~> 1.0'
   spec.add_dependency 'elasticsearch'
 
 end
