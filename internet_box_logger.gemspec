@@ -27,5 +27,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'whenever', '~> 0.9'
   spec.add_dependency 'easy_app_helper', '~> 2.0'
   spec.add_dependency 'elasticsearch', '~> 1.0'
+  spec.add_dependency 'nokogiri'
 
 end
