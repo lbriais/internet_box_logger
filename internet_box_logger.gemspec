@@ -19,13 +19,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'rspec', '~> 3.1' # (3.1.0)
+  spec.add_development_dependency 'rake', '~> 10.4'
+  spec.add_development_dependency 'rspec', '~> 3.1'
   spec.add_development_dependency 'pry'
 
-  spec.add_dependency 'activesupport'# , '~> 4.1' # (4.1.8)
-  spec.add_dependency 'whenever'# , '~> 0.9' # (0.9.4)
-  spec.add_dependency 'easy_app_helper', '~> 2.0' # , '~> 1.0'
-  spec.add_dependency 'elasticsearch'# , '~> 1.0' # (1.0.6)
+  spec.add_dependency 'activesupport', '~> 4.2'
+  spec.add_dependency 'whenever', '~> 0.9'
+  spec.add_dependency 'easy_app_helper', '~> 2.0'
+  spec.add_dependency 'elasticsearch', '~> 1.0'
 
 end

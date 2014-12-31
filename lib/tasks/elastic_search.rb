@@ -29,10 +29,10 @@ module InternetBoxLogger
             yield f
           end
           pid = es_pid
-          raise "Invalid operation on pid file" if pid.nil? || pid < 1
+          raise 'Invalid operation on pid file' if pid.nil? || pid < 1
         else
-          raise "Specify a pid or a block !" if pid.nil?
-          raise "Invalid pid!" unless pid.is_a? Fixnum
+          raise 'Specify a pid or a block !' if pid.nil?
+          raise 'Invalid pid!' unless pid.is_a? Fixnum
           File.open(ES_PID_FILE, 'w+') do |f|
             f.puts pid
           end
