@@ -10,7 +10,7 @@ namespace :internet_box_logger do
 
   task :booted_environment do
     require 'internet_box_logger'
-    EasyAppHelper.config.script_filename = "#{ibl_gem_path}/config/internet_box_logger.conf"
+    EasyAppHelper.config.executable_name = 'internet_box_logger' # script_filename = "#{ibl_gem_path}/config/internet_box_logger.conf"
     EasyAppHelper.config[:verbose] = true
   end
 

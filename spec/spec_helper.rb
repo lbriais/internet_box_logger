@@ -15,8 +15,11 @@
 #
 
 require 'internet_box_logger'
-EasyAppHelper.config.script_filename = File.expand_path '../../config/internet_box_logger.conf', __FILE__
+
+EasyAppHelper.config[:'config-file'] = File.expand_path '../../config/internet_box_logger.conf', __FILE__
+EasyAppHelper.config.provided_config_file_layer.managed
 EasyAppHelper.config[:freebox_alternate_url] = File.expand_path '../../test/freebox_page_example.txt', __FILE__
+EasyAppHelper.config.reload_layers
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|

@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-# require 'rubygems'
-# require 'bundler/setup'
 require 'internet_box_logger'
 require 'tasks/internet_box_logger_tasks'
 
@@ -15,19 +13,14 @@ module InternetBoxLogger
     def initialize
       # Providing this data is optional but brings better logging and online help
       config.describes_application(app_name: APP_NAME, app_version: InternetBoxLogger::VERSION, app_description: DESCRIPTION)
-      # Ugly hack to fix issue with easy_app_helper way of managing gem config files
-      gem_conf_file = File.join EasyAppHelper::Core::Config::Places.gem_root_path(__FILE__), 'config', 'internet_box_logger.conf'
-      config.internal_configs[:gem] = {
-          content: Hash[YAML::load(File.open(gem_conf_file)).map { |k, v| [k.to_sym, v] }],
-          source: gem_conf_file,
-          origin: :internet_box_logger
-      }
+      add_cmd_line_options
+      logger.debug "Detailed configuration ->\n#{config.detailed_layers_info}"
+      logger.debug "Merged configuration ->\n#{config[].to_yaml}"
     end
 
     def run
-      add_cmd_line_options
       if config[:help]
-        puts config.help
+        puts config.command_line_help
         exit 0
       end
       begin
@@ -99,5 +92,4 @@ module InternetBoxLogger
 
   end
 end
-
 InternetBoxLogger::Script.new.run
