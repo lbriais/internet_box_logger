@@ -57,10 +57,9 @@ kibana_path: /opt/kibana
 
 server_port: 5000
 
-default_elastic_search:
-  elastic_servers:
-    - 127.0.0.1:9200
-  elastic_binary: /opt/elasticsearch/bin/elasticsearch
+elastic_servers:
+  - 127.0.0.1:9200
+elastic_binary: /opt/elasticsearch/bin/elasticsearch
 ```
 
 * `box_type` specifies the module in charge of gathering data from your box. it Should not be changed but you can define
@@ -75,8 +74,6 @@ ElasticSearch on the same machine as the gem is installed, then it should alread
 * `elastic_binary` defines where your [ElasticSearch][ELK] is installed. This one is only used by a rake task
 (to stop/start and get info) about the ElasticSearch cluster. This is not really needed for the log process to work.
 Only to enable stop/start of the server.
-When you change it in your config, you do not need to set it in the `default_elastic_search` hash, but instead you can
-directly set it at the root.
 
 **These values are the default and you don't need to create a new config file if they already fit your needs.**
 And it should be the case if you installed [ELK] as a whole on the machine you are using this gem.

@@ -4,11 +4,11 @@ module InternetBoxLogger
     module Server
 
       def self.[]
-        EasyAppHelper.config[:elastic_servers] || EasyAppHelper.config[:default_elastic_search]['elastic_servers']
+        EasyAppHelper.config[:elastic_servers]
       end
 
       def self.local_path
-        EasyAppHelper.config[:elastic_binary] || EasyAppHelper.config[:default_elastic_search]['elastic_binary']
+        EasyAppHelper.config[:elastic_binary]
       end
 
       def self.local?
