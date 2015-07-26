@@ -83,11 +83,26 @@ module InternetBoxLogger
         slop.on :es_stop, 'Stops the ElasticSearch server if installed locally and properly configured', argument: false
         slop.on :serve, 'Runs a simple web server to serve Kibana UI', argument: false
         slop.on :server_port, 'Specify server port if you use the "--serve" option', argument: true, as: Integer
+        slop.on :daemon, 'Run as daemon', argument: false
       end
     end
 
     def log_box_information
-      InternetBoxLogger.get_box.log_box_info
+      if config[:daemon]
+        running = true
+        trap 'SIGINT' do
+          running = false
+        end
+        sleep_time = config[:cron_interval].to_i
+
+        while running do
+          InternetBoxLogger.get_box.log_box_info
+          sleep sleep_time
+        end
+
+      else
+        InternetBoxLogger.get_box.log_box_info
+      end
     end
 
   end
