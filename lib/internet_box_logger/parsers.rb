@@ -1,5 +1,6 @@
 require 'internet_box_logger/parsers/utils'
 require 'internet_box_logger/parsers/freebox_v5_parser'
+require 'internet_box_logger/parsers/bbox_tg787_parser'
 
 module InternetBoxLogger
   module Parsers
